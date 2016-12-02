@@ -1,0 +1,41 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry "OpenELEC" {
+    search --set=root --label OE_SYSTEM --hint hd0,msdos5
+    linux /KERNEL boot=LABEL=OE_SYSTEM disk=LABEL=OE_DATA quiet
+ }
+ 
+menuentry "remixos" {
+set root='(hd0,6)'
+linux /remixos/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 SRC=/remixos
+initrd /remixos/initrd.img}
+
+menuentry "android6 sda6" {
+set root='(hd0,6)'
+linux /android6/kernel quiet root=/dev/ram0 androidboot.hardware=android_x86 SRC=/android6
+initrd /android6/initrd.img}
+#remember to make "/android6/data" so that it can be saved on reboot
+
+menuentry "DSL" {
+set root='(hd0,6)'
+linux /dsl/linux24 KNOPPIX_DIR=dsl knoppix_dir=dsl BOOT_IMAGE=knoppix
+initrd /dsl/minirt24.gz}
+
+menuentry "Android 4.0.2 sda6" {
+set root='(hd0,6)'
+linux /android4.0.2/kernel  root=/dev/ram0 quiet androidboot.hardware=thinkpad video=1024x768 i915.lvds_downclock=1 i915.powersave=1 usbcore.autosuspend=2 quiet SRC=/android4.0.2/ DATA=/android4.0.2 SDCARD=/android4.0.2/sdcard.img
+initrd /android4.0.2/initrd.img}
+
+menuentry "Kubuntu 15.04 ISO" {
+set isofile="/home/maketecheasier/TempISOs/kubuntu-15.04-desktop-amd64.iso"
+loopback loop (hd0,1)$isofile
+echo "Starting $isofile..."
+linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=${isofile} quiet splash
+initrd (loop)/casper/initrd.lz
+}
+
+### END /etc/grub.d/40_custom ###
+
