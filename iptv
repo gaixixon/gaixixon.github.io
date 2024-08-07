@@ -1,9 +1,9 @@
-#EXTM3U
+#EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml"
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1
 https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjMwMjM3NzcsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.6zTY5MIJKBuwXP3_lZzsKmW4GHGfLymyVIZtHpflX84&minrate=0&maxrate=6000000&uid=116.96.44.83
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
 https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjMwMjMzNzgsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.GBMdwoat4syLp7TCukG19E4h8-tfH0EaM3g37q3LIso&minrate=0&maxrate=6000000&uid=123.16.54.
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/vi/9/9e/VTV9_HD.png" group-title="VTV", VTV Can Tho
+#EXTINF:-1 tvg-logo="https://imgur.com/HCpqatZ" group-title="VTV", VTV Can Tho
 https://fo-hlc.tv360.vn/bpk-tv/156/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjMwMjM5MDAsInVyaSI6Ii9icGstdHYvMTU2L291dHB1dC9pbmRleC5tM3U4In0.3u7e9Kaqhme5ueQqk4Hed5jo4qizBtOh42Um9uR3mUM&minrate=0&maxrate=6000000&uid=113.20.109.93
 #EXTINF:-1 tvg-logo="" group-title="UnCategoried", Test Video Link
 http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
