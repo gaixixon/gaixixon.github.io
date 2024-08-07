@@ -23,7 +23,7 @@ https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
 http://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="WAGADT1.us" tvg-logo="https://i.imgur.com/DcZoeGw.jpg" group-title="News",FOX 5 Atlanta GA (WAGA-TV) (720p)
 https://lnc-waga.tubi.video/index.m3u8
-#EXTINF:-1 tvg-id="WNYWDT1.us" tvg-logo="https://i.imgur.com/zZd9Tkt.png" group-title="News",FOX 5 New York NY (WNYW) (720p)
+#EXTINF:-1 tvg-id="WNYWDT1.us" tvg-logo="https://i.imgur.com/DcZoeGw.jpg" group-title="News",FOX 5 New York NY (WNYW) (720p)
 https://lnc-wnyw.tubi.video/index.m3u8
 #EXTINF:-1 tvg-id="WTTGDT1.us" tvg-logo="https://i.imgur.com/ktLKla7.png" group-title="News",FOX 5 Washington DC (WTTG) (720p)
 https://lnc-wttg.tubi.video/index.m3u8
@@ -36,11 +36,11 @@ https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_35
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J6WqYPU.png" group-title="News", MSNBC
 http://143.244.60.30/NBC_EAST/index.m3u8
 #FASHION TV
-#EXTINF:-1 tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-08/532667b2949c89efcfba09fe19303748.png" group-title="Fashion", Fashion TV
+#EXTINF:-1 tvg-logo="https://seeklogo.com/images/F/fashion-tv-logo-C333C7A6DD-seeklogo.com.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/sftv2_chunklist.m3u8
-#EXTINF:-1 tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-08/532667b2949c89efcfba09fe19303748.png" group-title="Fashion", Fashion TV4K
+#EXTINF:-1 tvg-logo="https://i.imgur.com/1Rw5hy3.png" group-title="Fashion", Fashion TV4K
 https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://p1.hiclipart.com/preview/914/560/43/tv-channel-icons-pack-fashion-tv-white-png-icon.jpg" group-title="Fashion",Fashion TV Midnight Secrets
+#EXTINF:-1 tvg-logo="https://i.imgur.com/fmDBNHe.png" group-title="Fashion",Fashion TV Midnight Secrets
 https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="d" group-title="Fashion", Kaloopyz
 https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kaloopy/df363c46-44c2-4817-9c85-0bd06299d478/2.m3u8
