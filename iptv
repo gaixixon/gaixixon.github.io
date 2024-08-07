@@ -33,6 +33,9 @@ https://n18syndication.akamaized.net/bpk-tv/CNN_News18_NW18_MOB/output01/index.m
 https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgT-R52bE5nFi11FvXv3Er0ADTmXuBd3ieeQ&s" group-title="News",CNN USA
 https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
+#EXTINF:-1 tvg-logo="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/newscms/2021_35/3502557/msnbc-logo.png" group-title="News", MSNBC
+http://143.244.60.30/NBC_EAST/index.m3u8
+#FASHION TV
 #EXTINF:-1 tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-08/532667b2949c89efcfba09fe19303748.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/sftv2_chunklist.m3u8
 #EXTINF:-1 tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-08/532667b2949c89efcfba09fe19303748.png" group-title="Fashion", Fashion TV4K
