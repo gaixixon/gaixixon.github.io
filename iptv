@@ -1,4 +1,8 @@
 #EXTM3U
+#EXTINF:-1 tvg-logo="" group-title="VTV", VTV1
+https://s3-fpt-cdn.sohatv.vn/live/pull/SWFYEZzBG7clIMM9/vtv-live/JnTu3cwriGGFMFAv/337a54767a7233703637564336316a6d155b4dab11b046f8580a7fe1e7245da5b6f353a755f7f159bde057cc0ab74584b2ee389f95d28a31d261572cf79945f0decb7a12442a06df8c044c8167d0780eb421e9a21a7ff948ef9f9aafa708ffd4aaa81158061db32f6a7050a9c0a10414074000313c57500ce379496387c5658feed7303bb34938368c312cc9345af1683a0baeb4253b45507d8eb637ad4380504d312e91c4bebea15f58175f43770d66ec2a89c11e2f11c1823f78a1a47108820835d3d73836dd565d7dcfeea1aa243618ef3bc4c522351cfb538e924ac0816d439d41c93318e1e1c768b6279e41a441442cd9dd141c3adc279b11c88dd31009c490d619f14417f962c82c1597252e8c68fa1f0b003a92c45d7bb5b92538c5b8dbfe6fc43ae8e3b8b5161deae347283e156ff4d7126ff50fc320ce5405ae4fb7a86a97e3ea530fdcf1ab12d7443583116f8e78f5aee6c411f64b316ad4699bdf2d0307a8d3da85d0e02e20a560dba0e6b6798042bf05c24c27b32c98afdab4e3/720p.m3u8
+#EXTINF:-1 tvg-logo="" group-title="UnCategoried", Test Video Link
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News
 https://news.codeautoplaycdn1.workers.dev/?codeby=nd&channel=foxnewschannel
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News2
@@ -35,4 +39,3 @@ https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_mi
 https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kaloopy/df363c46-44c2-4817-9c85-0bd06299d478/2.m3u8
 #EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS38lomXSuH6DRK_p_TUUGZFYiS1o7Aj_JE73HE7njPQtPjVTGnV1SSuLEeOEJXOxmcCw&usqp=CAU" group-title="Others", Love Nature4K
 https://d18dyiwu97wm6q.cloudfront.net/playlist2160p.m3u8
-
