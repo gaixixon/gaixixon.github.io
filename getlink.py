@@ -53,6 +53,7 @@ def get_get_requests():
         print("An error occurred:", e)
         return None
     finally:
+        print("dont quit yet")
         #driver.quit()
 
 
