@@ -1,2 +1,2 @@
 #EXTINF:-1 tvg-id="vtv1"
-https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2MzIyMDcsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.zBSJogq34mTjvCNIozPozWcdWZ5Cf8NOc0RQ_a-GSUo&minrate=0&maxrate=6000000&uid=3.84.117.219
+https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2MzIzOTMsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.7Q9Vl-LlD9oNBG3KWvq90stWpmWSlNueRs0G-Iy-sW8&minrate=0&maxrate=6000000&uid=3.84.117.219

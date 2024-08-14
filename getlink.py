@@ -93,4 +93,5 @@ def get_link(tvid , tvurl):
     else:
         print("No GET requests found.")
 
-get_link(url[0]["tvid"] , url[0]["tvurl"])
+for tv in url:
+    get_link(tv["tvid"] , tv["tvurl"])
