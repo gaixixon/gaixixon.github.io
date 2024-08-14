@@ -53,7 +53,7 @@ def get_get_requests():
         print("An error occurred:", e)
         return None
     finally:
-        driver.quit()
+        #driver.quit()
 
 
 # Set Chrome options
@@ -95,3 +95,5 @@ def get_link(tvid , tvurl):
 
 for tv in url:
     get_link(tv["tvid"] , tv["tvurl"])
+
+driver.quit()
