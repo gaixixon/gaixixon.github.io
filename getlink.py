@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-url = [{"tvid":'#EXTINF:-1 tvg-id="vtv1"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"}]
+url = [{"tvid":'#EXTINF:-1 tvg-id="vtv1"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"},
+        {"tvid":'#EXTINF:-1 tvg-id="vtv3"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"}
+       ]
 #url = 'https://tv360.vn/tv/vtv1-hd?ch=2'
 
 def updatelink(file_path, search_string, replacement):
