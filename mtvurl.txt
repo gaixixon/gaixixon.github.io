@@ -1,3 +1,6 @@
 #EXTINF:-1 tvg-id="vtv3"
 https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2MzUwNDUsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.3oCnTaLuWplyfSVPlsF0Z3TWn2uTHslsJWbdhJxBWl4&minrate=0&maxrate=6000000&uid=3.84.117.219
 das
+#EXTINF:-1 tvg-id="vtv1"
+https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2MzgxMjksInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.OJC--R9xPKt6r6IcPtJR6d6X7XXbVaTI5eFyiDUZdwU&minrate=0&maxrate=6000000&uid=3.84.117.219#EXTINF:-1 tvg-id="vtv3"
+https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2MzgxNTksInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.QtTHNuCIeRLkiwTuNqzOZ3bZ9iI-S3rZwDDtGtvPyqE&minrate=0&maxrate=6000000&uid=3.84.117.219
