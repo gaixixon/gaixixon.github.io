@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-url = [{"tvid":'#EXTINF:-1 tvg-id="vtv1"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"}]
-#url = 'https://tv360.vn/tv/vtv1-hd?ch=2'
+#url = [{"tvid":'#EXTINF:-1 tvg-id="vtv1"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"}]
+url = 'https://tv360.vn/tv/vtv1-hd?ch=2'
 
 def updatelink(file_path, search_string, replacement):
   with open(file_path, 'r+', encoding='utf-8') as f:
@@ -61,34 +61,31 @@ options.add_argument("--headless")  # To run Chrome in headless mode
 # Initialize Selenium WebDriver with the service and Chrome options
 driver = webdriver.Chrome(options=options)
 
-def get_link(tvid , tvurl):    
-    # Navigate to the URL
-    driver.get(tvurl)
-    
-    # Wait for the video player element to be present
-    try:
-        video_player = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CLASS_NAME, "video-player")))
-        print("Video player loaded successfully.")
-    except:
-        pass  # Do nothing if the video player is not found, the message will not be printed
+# Navigate to the URL
+driver.get(url)
+
+# Wait for the video player element to be present
+try:
+    video_player = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CLASS_NAME, "video-player")))
+    print("Video player loaded successfully.")
+except:
+    pass  # Do nothing if the video player is not found, the message will not be printed
 
 
-    # Call the function to get GET requests
-    get_requests = get_get_requests()
+# Call the function to get GET requests
+get_requests = get_get_requests()
 
-    # Extract the desired URL
-    if get_requests:
-        desired_url = extract_desired_url(get_requests)
-        if desired_url:
-            print("Desired URL found:", desired_url)
-            updatelink('iptv', tvid ,  desired_url)
-            # Write the desired URL to the file
-            with open("mtvurl.txt", "w") as file:
-                file.write(tvid + "\n" + desired_url)
-                print("Desired URL written to mtvurl.txt")
-        else:
-            print("No desired URL found in the requests.")
+# Extract the desired URL
+if get_requests:
+    desired_url = extract_desired_url(get_requests)
+    if desired_url:
+        print("Desired URL found:", desired_url)
+        updatelink('iptv', '#EXTINF:-1 tvg-id="vtv1"' ,  desired_url)
+        # Write the desired URL to the file
+        with open("mtvurl.txt", "w") as file:
+            file.write(desired_url)
+            print("Desired URL written to mtvurl.txt")
     else:
-        print("No GET requests found.")
-
-get_link(url[0]["tvid"] , url[0]["tvurl"])
+        print("No desired URL found in the requests.")
+else:
+    print("No GET requests found.")
