@@ -1,2 +1,6 @@
 git remote -v xem noit6 dung remote
-ssh -T git@github.cogit remote set-url origin git@github.com:username/repo.git
+ssh -T git@github.com
+git remote set-url origin git@github.com:username/repo.git
+git add .
+git commit -m 'ffff'
+git push
