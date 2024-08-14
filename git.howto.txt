@@ -4,3 +4,10 @@ git remote set-url origin git@github.com:username/repo.git
 git add .
 git commit -m 'ffff'
 git push
+
+/////////////////////
+git clone git@github.com:gaixixon/gaixixon.github.io.git
+git add .
+git commit -m 'dafsds'
+git push
+/////////////////////
