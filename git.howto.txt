@@ -5,6 +5,14 @@ git add .
 git commit -m 'ffff'
 git push
 
+////// tạo key github
+ssh-keygen => tạo key private + public
+cat public_key.pub => manually bỏ lên site
+ssh -i {gxx_id_rsa} -Tv git@github.com; nhưng tốt nhất copy thằng private key thành id_rsa vào ./ssh
+sau đó có thể dùng git push
+///
+
+
 /////////////////////
 git clone git@github.com:gaixixon/gaixixon.github.io.git
 git add .
