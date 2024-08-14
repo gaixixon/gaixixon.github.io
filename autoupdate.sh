@@ -1,5 +1,6 @@
 #!/bin/bash
 cd ~/gaixixon.github.io
+sed '1 s/^.*$/Updated on $(date +%Y-%m-%d_%H:%M:%S)/' iptv
 python3 ~/tv360/gaixixon.github.io/getlink.py
 #sleep 15
 git add .
