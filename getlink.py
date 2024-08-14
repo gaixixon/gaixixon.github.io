@@ -79,7 +79,7 @@ if get_requests:
     desired_url = extract_desired_url(get_requests)
     if desired_url:
         print("Desired URL found:", desired_url)
-        updatelink('iptv.m3u8', '#EXTINF:-1 tvg-id="vtv1"' ,  desired_url)
+        updatelink('iptv', '#EXTINF:-1 tvg-id="vtv1"' ,  desired_url)
         # Write the desired URL to the file
         with open("mtvurl.txt", "w") as file:
             file.write(desired_url)
