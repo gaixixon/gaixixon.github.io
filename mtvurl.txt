@@ -1,1 +1,1 @@
-https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2MjY4MzcsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.gnn0vBCy9BwGcVWnWNZueBedte_vN2qWWKp8ApaYjuk&minrate=0&maxrate=6000000&uid=3.84.117.219
+https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM2Mjk2MjQsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.enF8LCtogWfB0l0XAc947_EkwR0QP9iWOJwlPIg0QF4&minrate=0&maxrate=6000000&uid=3.84.117.219
