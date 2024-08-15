@@ -1,18 +1,18 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml,https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz" tvg-shift=0 cache=500 deinterlace=1 aspect-ratio=16:9 m3uautoload=0
 #EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
 
-#--- Updated 2024-08-15_23:25:22  ---
+#--- Updated 2024-08-16_05:55:01  ---
 
-#EXTINF: -1, Updated on 2024-08-15_23:25:22!
+#EXTINF: -1, Updated on 2024-08-16_05:55:01!
 zzzzzzzzzzzzzzzzzz
 EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN HD 🇻🇳
 http://m3u.at/AXN-VN?-playlist.m3u8
 #EXTINF:-1 tvg-id="vtv1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 SD
-https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3NjA3MjcsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.ReaSWutYiRjN1Ft5j3fQ78JqHa37gKuNCPnqL5YtfyQ&minrate=0&maxrate=6000000&uid=3.27.210.163
+https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3ODQxMDYsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.Zu1ZiWfWCkrK_SU-qM5UeEaFAr_wc0ZrGfypZnGdMkA&minrate=0&maxrate=6000000&uid=3.27.210.163
 #EXTINF:-1 tvg-id="vtv1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD
-https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3NjA3MjcsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.ReaSWutYiRjN1Ft5j3fQ78JqHa37gKuNCPnqL5YtfyQ&minrate=0&maxrate=6000000&uid=3.27.210.163
+https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3ODQxMDYsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.Zu1ZiWfWCkrK_SU-qM5UeEaFAr_wc0ZrGfypZnGdMkA&minrate=0&maxrate=6000000&uid=3.27.210.163
 #EXTINF:-1 tvg-id="vtv3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
-https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3NjA3NTEsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.mfiF3ZvUFVpCoCXYSewYBNHZ64qxrvINT2FFtqJQi74&minrate=0&maxrate=6000000&uid=3.27.210.163
+https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3ODQxMzMsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.ZxdzOiHzi6h-f4Ta4ZFIFu9BMjOL50luu4ATc4OreAI&minrate=0&maxrate=6000000&uid=3.27.210.163
 #EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", VTV Cần Thơ
 https://fo-hlc.tv360.vn/bpk-tv/156/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjMzMDQ3MzAsInVyaSI6Ii9icGstdHYvMTU2L291dHB1dC9pbmRleC5tM3U4In0.mNnI-_kSFFc-ng9mktRZ56XqQbwxYErwei-I76LREds&minrate=0&maxrate=6000000&uid=27.79.251.225
 #EXTINF:-1 tvg-logo="" group-title="ZZZ", Test Video Link
