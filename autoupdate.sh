@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ~/gaixixon.github.io
-now = $(date +%Y-%m-%d %H:%M:%S)
+now=`date +%Y-%m-%d_%H:%M:%S`
 sed -i -e 's/#--- Updated .*---/#--- Updated $(now)---/' iptv
 python3 getlink.py
 #sleep 15
