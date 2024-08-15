@@ -1,6 +1,7 @@
 #!/bin/bash
 cd ~/gaixixon.github.io
-sed -i -e 's/#--- Updated .*---/#--- Updated $(date +%Y-%m-%d)---/' iptv
+timestamp=$(date +%Y-%m-%d_%H:%M:%S)
+sed -i -e 's/#--- Updated .*---/#--- Updated $(timestamp)---/' iptv
 python3 getlink.py
 #sleep 15
 git add .
