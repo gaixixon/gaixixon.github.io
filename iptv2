@@ -1,3 +1,4 @@
+#https://github.com/thoike84/iptv-vn/blob/main/phattai84.txt
 #----------*-VTV-*----------#
 
 #EXTINF:-1 group-title="🇻🇳| VTV" tvg-logo="https://i.imgur.com/nfkmvAY.png",VTV1
@@ -87,3 +88,6 @@ http://s4.nihontv.net:21585/discovery/index.m3u8
 #EXTINF:-1 group-title="🌏| Quốc tế"tvg-logo="https://i.imgur.com/qUiM77S.png",BBC Earth
 
 #EXTINF:-1 group-title="🌏| Quốc tế"tvg-logo="https://i.imgur.com/STCTI1F.png",Discovery Asia
+
+
+#https://note.vg/raw/phamthaotivi
