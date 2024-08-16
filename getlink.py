@@ -87,7 +87,7 @@ def get_link(tvid , tvurl):
             updatelink('iptv', tvid ,  desired_url)
             # Write the desired URL to the file
             with open("mtvurl.txt", "a") as file:
-                file.write(tvid + "\n" + desired_url)
+                #file.write(tvid + "\n" + desired_url)
                 print("Desired URL written to mtvurl.txt")
         else:
             print("No desired URL found in the requests.")
