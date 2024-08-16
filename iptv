@@ -6,7 +6,7 @@ EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vi
 http://m3u.at/AXN-VN?-playlist.m3u8
 #EXTINF:-1 tvg-id="vtv1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTVD
 https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3ODg0NzEsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.aICka_CY5bjMHontDHzWq1iUFi6TW3-F3qhV7FGyGTE&minrate=0&maxrate=6000000&uid=3.27.210.163
-#EXTINF:-1 tvg-id="vtv1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD
+#EXTINF:-1 tvg-id="v1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD
 https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3ODg0NzEsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.aICka_CY5bjMHontDHzWq1iUFi6TW3-F3qhV7FGyGTE&minrate=0&maxrate=6000000&uid=3.27.210.163
 #EXTINF:-1 tvg-id="vtv3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
 https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjM3ODg0OTgsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.5h5kPAgU-aEeDtDMuISn5obiF9Q8Wt5w7Pi5btjxqiY&minrate=0&maxrate=6000000&uid=3.27.210.163
