@@ -1,5 +1,6 @@
 #!/bin/bash
 cd ~/gaixixon.github.io
+git pull
 timestamp=$(date +%Y-%m-%d_%H:%M:%S)
 sed -i -e "s/#--- Updated .*---/#--- Updated ${timestamp}  ---/g" iptv
 sed -i -e "s/Updated on .*!/Updated on ${timestamp}!/g" iptv
