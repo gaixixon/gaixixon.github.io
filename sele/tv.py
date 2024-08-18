@@ -51,10 +51,9 @@ def get_m3u8_urls(url):
            or "Network.webSocket" in network_log["method"]):
            if 'request' in network_log["params"]:
                if 'url' in network_log["params"]["request"]:
-                   if 'm3u8' in network_log["params"]["request"]["url"] or '.mp4' in network_log["params"]["request"]["url"]:
-                       if "blob" not in network_log["params"]["request"]["url"]:
-                           if '.m3u8' in network_log["params"]["request"]["url"]:
-                               url_list.append( network_log["params"]["request"]["url"] )
+                   if  'm3u8' in network_log["params"]["request"]["url"] or '.mp4' in network_log["params"]["request"]["url"]:
+                       print(network_log["params"]["request"]["url"])
+                       url_list.append( network_log["params"]["request"]["url"] )
 
    driver.close()
    return url_list
@@ -62,5 +61,6 @@ def get_m3u8_urls(url):
 if __name__ == "__main__":
 
    url = "https://fruitlab.com/video/aTUqTrJrMtj6FgO5?ntp=ggm"
+   url = "https://tv360.vn/tv/vtv1-hd?ch=2&col=recommend_live&sect=RECOMMEND&page=home"
    url_list = get_m3u8_urls(url)
    print:(url_list)
