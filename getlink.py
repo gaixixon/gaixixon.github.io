@@ -100,7 +100,7 @@ def get_link(channel, tvid , tvurl):
 for tv in url:
     get_link(tv["channel"] , tv["tvid"] , tv["tvurl"])
 
-with open("iptv.json", "a") as file:
+with open("iptv.json", "w") as file:
     file.write('[' + tv_link + ']')
 
 driver.quit()
