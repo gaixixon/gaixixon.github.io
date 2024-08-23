@@ -8,8 +8,8 @@ http://m3u.at/AXN-VN?-playlist.m3u8
 https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD
 https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjQ0Mzk2NjksInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.N6ncmatW1BERKQ0YXpo2EmUuAWSM8kjIqzjpN9YyggE&minrate=0&maxrate=7000000&uid=3.27.210.163
-#EXTINF:-1 tvg-id="vvthd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 manualz
-https://gaixixon.github.io/vtv1.html
+#EXTINF:-1 tvg-id="vvthd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 manualzzzzzzzzzzzzzzzzzz
+https://thohanhdung.com/test/vtv1.php
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
 https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjQ0Mzk2OTYsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.hup3Pq-fBWyMI-bDdltxrPs_Ns8efz47-T2_oYFvBOA&minrate=0&maxrate=7000000&uid=3.27.210.163
 #EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", VTV Cần Thơ
