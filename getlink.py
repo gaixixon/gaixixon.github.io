@@ -3,9 +3,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-url = [{"tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"},
-        {"tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"}
+url = [{"channel":"vtv1","tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"},
+       {"channel":"vtv3","tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"}
        ]
+
+global tv_link
+
 #url = 'https://tv360.vn/tv/vtv1-hd?ch=2'
 
 def updatelink(file_path, search_string, replacement):
@@ -64,7 +67,7 @@ options.add_argument("--headless")  # To run Chrome in headless mode
 # Initialize Selenium WebDriver with the service and Chrome options
 driver = webdriver.Chrome(options=options)
 
-def get_link(tvid , tvurl):    
+def get_link(channel, tvid , tvurl):    
     # Navigate to the URL
     driver.get(tvurl)
     
@@ -84,17 +87,19 @@ def get_link(tvid , tvurl):
         desired_url = extract_desired_url(get_requests)
         if desired_url:
             print("Desired URL found:", desired_url)
-            updatelink('iptv', tvid ,  desired_url)
+            #updatelink('iptv', tvid ,  desired_url)
             # Write the desired URL to the file
-            with open("mtvurl.txt", "a") as file:
-                #file.write(tvid + "\n" + desired_url)
-                print("Desired URL written to mtvurl.txt")
+            tv_link += '{"channel":"' + channel +'" , "link":"'+ desired_url +'"},\n'
+            print("Desired URL written to mtvurl.txt")
         else:
             print("No desired URL found in the requests.")
     else:
         print("No GET requests found.")
 
 for tv in url:
-    get_link(tv["tvid"] , tv["tvurl"])
+    get_link(tv["channel"] , tv["tvid"] , tv["tvurl"])
+
+with open("mtvurl.txt", "a") as file:
+    file.write('[' + tv_link + ']')
 
 driver.quit()
