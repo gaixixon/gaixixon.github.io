@@ -90,7 +90,7 @@ def get_link(channel, tvid , tvurl):
             print("Desired URL found:", desired_url)
             #updatelink('iptv', tvid ,  desired_url)
             # Write the desired URL to the file
-            tv_link = tv_link + '{"channel":"' + channel +'" , "link":"'+ desired_url +'"},\n'
+            tv_link = tv_link + '{"channel":"' + channel +'" , "link":"'+ desired_url +'"},'
             print("Desired URL written to mtvurl.txt")
         else:
             print("No desired URL found in the requests.")
@@ -101,6 +101,6 @@ for tv in url:
     get_link(tv["channel"] , tv["tvid"] , tv["tvurl"])
 
 with open("iptv.json", "w") as file:
-    file.write('[' + tv_link + ']')
+    file.write('[' + tv_link + '{}]')
 
 driver.quit()
