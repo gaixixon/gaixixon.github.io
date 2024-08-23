@@ -101,6 +101,6 @@ for tv in url:
     get_link(tv["channel"] , tv["tvid"] , tv["tvurl"])
 
 with open("iptv.json", "w") as file:
-    file.write('[' + tv_link + '{}]')
+    file.write('[' + tv_link + '{"channel":"", "link":""}]')
 
 driver.quit()
