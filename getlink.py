@@ -7,7 +7,7 @@ url = [{"channel":"vtv1","tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://
        {"channel":"vtv3","tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"}
        ]
 
-global tv_link
+tv_link=''
 
 #url = 'https://tv360.vn/tv/vtv1-hd?ch=2'
 
@@ -84,12 +84,13 @@ def get_link(channel, tvid , tvurl):
 
     # Extract the desired URL
     if get_requests:
+        global tv_link
         desired_url = extract_desired_url(get_requests)
         if desired_url:
             print("Desired URL found:", desired_url)
             #updatelink('iptv', tvid ,  desired_url)
             # Write the desired URL to the file
-            tv_link += '{"channel":"' + channel +'" , "link":"'+ desired_url +'"},\n'
+            tv_link = tv_link + '{"channel":"' + channel +'" , "link":"'+ desired_url +'"},\n'
             print("Desired URL written to mtvurl.txt")
         else:
             print("No desired URL found in the requests.")
@@ -99,7 +100,7 @@ def get_link(channel, tvid , tvurl):
 for tv in url:
     get_link(tv["channel"] , tv["tvid"] , tv["tvurl"])
 
-with open("mtvurl.txt", "a") as file:
+with open("iptv.json", "a") as file:
     file.write('[' + tv_link + ']')
 
 driver.quit()
