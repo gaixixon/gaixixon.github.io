@@ -101,6 +101,6 @@ for tv in url:
     get_link(tv["channel"] , tv["tvid"] , tv["tvurl"])
 
 with open("iptv.json", "w") as file:
-    file.write('[' + tv_link + '{"channel":"", "link":""}]')
+    file.write('[' + tv_link + '{"channel":"test", "link":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"}]')
 
 driver.quit()
