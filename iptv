@@ -1,17 +1,22 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml,https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz" tvg-shift=0 cache=500 deinterlace=1 aspect-ratio=16:9 m3uautoload=0
 #EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
-#EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-08-23_15:03:12!
+#EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-08-23_16:43:48!
 http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
 #EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN HD 🇻🇳
 http://m3u.at/AXN-VN?-playlist.m3u8
 #EXTINF:-1 tvg-name="AXN", AXN
 https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD
-https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjQzMzUyNjksInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.GRHYjUYoiad0Qwy3vqOMpmL051b7pTRjb8WRa8onPLs&minrate=0&maxrate=7000000&uid=3.27.210.163
+https://fo-hlc.tv360.vn/bpk-tv/154/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjQ0Mjc4MzEsInVyaSI6Ii9icGstdHYvMTU0L291dHB1dC9pbmRleC5tM3U4In0.2NhA55kr9WFINwh92V93DFxjHPAG8hQB_6I9iGt4JUI&minrate=0&maxrate=7000000&uid=3.27.210.163
+<<<<<<< HEAD
 #EXTINF:-1 tvg-id="vvthd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 manual
 http://3.27.210.163/vtv1.m3u8
+=======
+#EXTINF:-1 tvg-id="vvthd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 manualz
+https://gaixixon.github.io/vtv1.html
+>>>>>>> 4354fcffb4cc9f4dafa8657c44d87aae1ebed6fd
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
-https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjQzMzUyOTYsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.8I-31VVqRNyLC4vU_k5gueZpZ8L7A5mDGwoz0w4ydr4&minrate=0&maxrate=7000000&uid=3.27.210.163
+https://fo-hlc.tv360.vn/bpk-tv/155/output/index.m3u8?auth=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJtZXRob2QiOiJHRVQiLCJleHAiOjE3MjQ0Mjc4NTgsInVyaSI6Ii9icGstdHYvMTU1L291dHB1dC9pbmRleC5tM3U4In0.5AjwDtKdqS3ug8KTq2o_HAySDXeKwkb-fpjCgP5YyKU&minrate=0&maxrate=7000000&uid=3.27.210.163
 #EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", VTV Cần Thơ
 https://s3-fpt-cdn.sohatv.vn/live/pull/SWFYEZzBG7clIMM9/vtv-live/IT5tfH7zfPTOETlV/337a54767a7233703637564336316a6d3ec618e674a7c293f0815a782b83046462d0c7c2513181127875ea8497ced682f0d68c98bed871d533770d23e10f16b387fcb2f950cf54b78f1ed630ce71bce62ece588f4676b1ee1888e862418db2f1ede10b7286a7342f8b9c94559f51826cc0789b12fd83827cd4ea8ecd81329266a1efdbd54664ce9d4d46202aa66401c6f440c7d66ce6c07d5a073686c5ad58a915a30df058220c693399562b1d451445cc1795962d42bce9d12dfea4a9db623c429e65477f19827e134ecf2c1e497956ca476a04d7d8822d3dbbd3c90c6995b18396646681686a5bf61ac23a56001d5b09b96d5bb8f5e2472a46accd9d04b2fff3758b905e3febe1db7c4d28147d921b8302443afc428a168ed461af70e028ec064a6813df00867a49710ff0e2e819d3447cabceee3a874638310e8e2a2132bf63c00efe9e7a9c181d8e0702f51ceb07db0d35ced47ffffa1af9c96f75236ddf8cf1c22b5c9b003a0c1a320379a1beb140b39c7e05d4aa1c4acea08ac2dd6ab0/master.m3u8?extSrc=vtv6
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News
