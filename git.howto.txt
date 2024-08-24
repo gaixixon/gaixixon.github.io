@@ -19,3 +19,8 @@ git add .
 git commit -m 'dafsds'
 git push
 /////////////////////
+
+//// git pull and ignore local changes
+git reset --hard
+git pull
+//////////////////
