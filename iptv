@@ -6,7 +6,7 @@ http://gxx.000.pe/iptv/iptv.php?channel=test
 http://m3u.at/AXN-VN?-playlist.m3u8
 #EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN.bak
 https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd
-#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD
+#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 HD 1080
 http://gxx.000.pe/iptv/iptv.php?channel=vtv1
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
 https://thohanhdung.com/test/iptv.php?channel=vtv3
