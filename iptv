@@ -10,7 +10,7 @@ https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd
 https://thohanhdung.com/test/iptv.php?channel=vtv1
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
 https://thohanhdung.com/test/iptv.php?channel=vtv3
-#EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", Canto
+#EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", Cantoz
 http://3.104.22.49/vtv1.html
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News
 https://news.codeautoplaycdn1.workers.dev/?codeby=nd&channel=foxnewschannel
