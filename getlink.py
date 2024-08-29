@@ -4,7 +4,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 url = [{"channel":"vtv1","tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"},
-       {"channel":"vtv3","tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"}
+       {"channel":"vtv3","tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"},
+       {"channel":"vtv2","tvid":'#EXTINF:-1 tvg-id="vtv2hd"' , "tvurl":"https://tv360.vn/tv/vtv2-hd?ch=3"}
        ]
 
 tv_link=''
