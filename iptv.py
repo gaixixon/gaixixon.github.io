@@ -13,20 +13,21 @@ class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
         #self.process_request()
 
-        if self.path.split('?')[1]:
+        try:
             params = urllib.parse.parse_qs(self.path.split('?')[1])
- 
-        if "?channel=test" in self.path:
-            # Redirect to another location (e.g., http://example.com)
-            self.send_response(302, 'Found')  # Use 302 for temporary redirection
-            self.send_header('Location', 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4')
-            self.end_headers()
-        else:
+            for item in iptv_list:
+                if item['channel'] == params['channel'][0]:
+                    # Redirect to another location (e.g., http://example.com)
+                    self.send_response(302, 'Found')  # Use 302 for temporary redirection
+                    self.send_header('Location', item['link'])
+                    self.end_headers()
+                    break
+            return
+        except:
             self.send_response(200)
             self.end_headers()
-            self.wfile.write(b"Nothing\n")
+            self.wfile.write(b"You requested: \n")
             self.wfile.write(bytes(self.path + "\n","utf-8"))
-            self.wfile.write(bytes(params,"utf-8"))
 
     def do_POST(self):
         self.process_request()
