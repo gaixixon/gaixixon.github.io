@@ -8,10 +8,14 @@ serverPort = 8888
 
 with open('iptv.json','r') as f:
     iptv_list = json.load(f)
+    f.close()
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
         #self.process_request()
+        with open('../logs/http_request.log','a') as f:
+            f.write('ip: => ' + self.client_address[0] + ' requested => ' + self.path + '\n')
+            f.close()
 
         try:
             params = urllib.parse.parse_qs(self.path.split('?')[1])
@@ -22,12 +26,15 @@ class MyServer(BaseHTTPRequestHandler):
                     self.send_header('Location', item['link'])
                     self.end_headers()
                     break
+            self.send_error(403, "Forbidden")
             return
         except:
+            #self.send_error(403,"I don't know")
             self.send_response(200)
             self.end_headers()
             self.wfile.write(b"You requested: \n")
             self.wfile.write(bytes(self.path + "\n","utf-8"))
+            return
 
     def do_POST(self):
         self.process_request()
