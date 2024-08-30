@@ -1,14 +1,21 @@
 # Python 3 server example
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time
+import time, json
 import urllib.parse
 
 hostName = "0.0.0.0"
 serverPort = 8888
 
+with open('iptv.json','r') as f:
+    iptv_list = json.load(f)
+
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
         #self.process_request()
+
+        if self.path.split('?')[1]:
+            params = urllib.parse.parse_qs(self.path.split('?')[1])
+ 
         if "?channel=test" in self.path:
             # Redirect to another location (e.g., http://example.com)
             self.send_response(302, 'Found')  # Use 302 for temporary redirection
@@ -17,7 +24,9 @@ class MyServer(BaseHTTPRequestHandler):
         else:
             self.send_response(200)
             self.end_headers()
-            self.wfile.write(b"Nothing!")
+            self.wfile.write(b"Nothing\n")
+            self.wfile.write(bytes(self.path + "\n","utf-8"))
+            self.wfile.write(bytes(params,"utf-8"))
 
     def do_POST(self):
         self.process_request()
