@@ -1,6 +1,6 @@
 # Python 3 server example
 from http.server import BaseHTTPRequestHandler, HTTPServer
-import time, json
+import time, json, datetime
 import urllib.parse
 
 hostName = "0.0.0.0"
@@ -14,7 +14,7 @@ class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
         #self.process_request()
         with open('../logs/http_request.log','a') as f:
-            f.write('ip: => ' + self.client_address[0] + ' requested => ' + self.path + '\n')
+            f.write(f'{datetime.datetime.now()} ip: => {self.client_address[0]} requested => {self.path}\n')
             f.close()
 
         try:
