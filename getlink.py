@@ -50,6 +50,7 @@ def get_get_requests():
 
 def gettv(channel , link):
     print('start to get tv channel ' + channel)
+    global tv_link
     driver.get(link)
     
     while 3>1:
@@ -58,7 +59,6 @@ def gettv(channel , link):
 
         # Extract the desired URL
         if get_requests:
-            global tv_link
             m3u8_found = find_m3u8(get_requests)
             if m3u8_found:
                 print("m3u8 link found: ", m3u8_found)
