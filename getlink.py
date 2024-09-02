@@ -54,7 +54,7 @@ def gettv(channel , link):
     driver.get(link)
     i=0
     while i<10:
-        i++
+        i+=1
         # Call the function to get GET requests
         m3u8_requests = get_m3u8_requests()
 
