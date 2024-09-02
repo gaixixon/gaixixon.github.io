@@ -49,32 +49,37 @@ def get_m3u8_requests():
         print("")
 
 def gettv(channel , link):
-    print('start to get tv channel ' + channel)
-    global tv_link
-    driver.get(link)
-    i=0
-    while i<10:
-        i+=1
-        # Call the function to get GET requests
-        m3u8_requests = get_m3u8_requests()
-
-        # Extract the desired URL
-        if m3u8_requests:
-            m3u8_found = find_m3u8(m3u8_requests)
-            if m3u8_found:
-                print("m3u8 link found: ", m3u8_found)
-                tv_link+='{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
-                break
+    try:
+        print('start to get tv channel ' + channel)
+        global tv_link
+        driver.get(link)
+        i=0
+        while i<10:
+            i+=1
+            # Call the function to get GET requests
+            m3u8_requests = get_m3u8_requests()
+   
+            # Extract the desired URL
+            if m3u8_requests:
+                m3u8_found = find_m3u8(m3u8_requests)
+                if m3u8_found:
+                    print("m3u8 link found: ", m3u8_found)
+                    tv_link+='{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
+                    break
+                else:
+                    print(".m3u8 not found.. keep trying..")
             else:
-                print(".m3u8 not found.. keep trying..")
-        else:
-            print("No GET requests found.")
-            break
+                print("No GET requests found.")
+                break
+
+    except Exception as e:
+        print("Error: " , e)
+    finally:
+        driver.quit()
 
 for url in urls:
     gettv(url["channel"] , url["tvurl"])
     time.sleep(random.randint(1, 5))    #sleep to avoid bot detect
 
-driver.quit()
 with open('iptv.json','w') as f:
     f.write('[' + tv_link + '{"channel":"test", "link":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"}]')
