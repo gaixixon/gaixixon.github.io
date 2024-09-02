@@ -1,3 +1,4 @@
+import time, random
 import undetected_chromedriver as uc
 
 # Define a custom user agent
@@ -23,7 +24,7 @@ def find_m3u8(requests):
             return request
     return None
 
-def get_get_requests():
+def get_m3u8_requests():
     try:
         # Execute JavaScript to capture network requests
         requests = driver.execute_script("""
@@ -51,14 +52,15 @@ def gettv(channel , link):
     print('start to get tv channel ' + channel)
     global tv_link
     driver.get(link)
-    
-    while 3>1:
+    i=0
+    while i<10:
+        i++
         # Call the function to get GET requests
-        get_requests = get_get_requests()
+        m3u8_requests = get_m3u8_requests()
 
         # Extract the desired URL
-        if get_requests:
-            m3u8_found = find_m3u8(get_requests)
+        if m3u8_requests:
+            m3u8_found = find_m3u8(m3u8_requests)
             if m3u8_found:
                 print("m3u8 link found: ", m3u8_found)
                 tv_link+='{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
@@ -71,6 +73,7 @@ def gettv(channel , link):
 
 for url in urls:
     gettv(url["channel"] , url["tvurl"])
+    time.sleep(random.randint(1, 5))    #sleep to avoid bot detect
 
 driver.quit()
 with open('iptv.json','w') as f:
