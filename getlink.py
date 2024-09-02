@@ -46,7 +46,6 @@ def get_get_requests():
         return None
     finally:
         print("")
-        #driver.quit()
 
 def gettv(channel , link):
     print('start to get tv channel ' + channel)
@@ -62,7 +61,7 @@ def gettv(channel , link):
             m3u8_found = find_m3u8(get_requests)
             if m3u8_found:
                 print("m3u8 link found: ", m3u8_found)
-                tvlink=tvlink + '{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
+                tvlink+='{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
                 break
             else:
                 print(".m3u8 not found.. keep trying..")
