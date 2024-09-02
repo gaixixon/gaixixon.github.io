@@ -57,11 +57,18 @@ def gettv(channel , link):
         global tv_link
         driver.maximize_window()
         driver.get(link)
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[id='loadVideoBtn']"))).click()
+        try:
+            #video_player = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CLASS_NAME, "video-button")))
+            video_player = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[id='my-jwplayer']"))).click()
+            print("Video player loaded successfully.")
+        except:
+            print('video not play')
+            pass  # Do nothing if the video player is not found, the message will not be printed
+
         driver.save_screenshot("search.png")
 
-        i=99
-        while i<100:
+        i=999
+        while i<1000:
             i+=1
             # Call the function to get GET requests
             m3u8_requests = get_m3u8_requests()
@@ -86,7 +93,7 @@ def gettv(channel , link):
 
 for url in urls:
     gettv(url["channel"] , url["tvurl"])
-    time.sleep(random.randint(1, 15))    #sleep to avoid bot detect
+    #time.sleep(random.randint(1, 15))    #sleep to avoid bot detect
 
 driver.quit()
 
