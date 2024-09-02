@@ -1,5 +1,10 @@
 import time, random
 import undetected_chromedriver as uc
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 # Define a custom user agent
 agent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
@@ -9,9 +14,7 @@ opts.add_argument(f"user-agent={agent}")
 
 driver = uc.Chrome(options=opts, headless=True)
 
-urls = [{"channel":"vtv1","tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"},
-       {"channel":"vtv3","tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"},
-       {"channel":"vtv2","tvid":'#EXTINF:-1 tvg-id="vtv2hd"' , "tvurl":"https://tv360.vn/tv/vtv2-hd?ch=3"}
+urls = [{"channel":"cspan","tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://thetvapp.to/tv/cspan-live-stream/"}
        ]
 
 tv_link=''
@@ -19,7 +22,7 @@ tv_link=''
 def find_m3u8(requests):
     # Search for the m3u8 URL in the requests
     for request in requests:
-        #print(request)
+        print(request)
         if "m3u8" in request:
             return request
     return None
@@ -52,9 +55,13 @@ def gettv(channel , link):
     try:
         print('start to get tv channel ' + channel)
         global tv_link
+        driver.maximize_window()
         driver.get(link)
-        i=0
-        while i<10:
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//button[id='loadVideoBtn']"))).click()
+        driver.save_screenshot("search.png")
+
+        i=99
+        while i<100:
             i+=1
             # Call the function to get GET requests
             m3u8_requests = get_m3u8_requests()
