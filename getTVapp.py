@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Define a custom user agent
 agent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
 
 opts = uc.ChromeOptions()
 opts.add_argument(f"user-agent={agent}")
