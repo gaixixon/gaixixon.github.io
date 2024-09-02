@@ -14,8 +14,6 @@ import json
 desired_capabilities = DesiredCapabilities.CHROME
 desired_capabilities["goog:loggingPrefs"] = {"performance": "ALL"}
 
-url = 'https://fruitlab.com/video/aTUqTrJrMtj6FgO5?ntp=ggm'
-
 # Set Chrome options
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")  # To run Chrome in headless mode
@@ -39,7 +37,7 @@ driver = webdriver.Chrome( options=options)
 def get_m3u8_urls(url):
    driver.get(url)
    driver.execute_script("window.scrollTo(0, 10000)")
-   time.sleep(20)
+   #time.sleep(20)
    logs = driver.get_log("performance")
    url_list = []
 
@@ -60,8 +58,7 @@ def get_m3u8_urls(url):
 
 if __name__ == "__main__":
 
-   url = "https://fruitlab.com/video/aTUqTrJrMtj6FgO5?ntp=ggm"
-   url = "https://tv360.vn/tv/vtv1-hd?ch=2&col=recommend_live&sect=RECOMMEND&page=home"
-   url = "https://vtv.vn/truyen-hinh-truc-tuyen/vtv1.htm"
+   url = "https://tv360.vn/tv/vtv1-hd?ch=2"
+   #url = "https://vtv.vn/truyen-hinh-truc-tuyen/vtv1.htm"
    url_list = get_m3u8_urls(url)
-   print:(url_list)
+   print(url_list)
