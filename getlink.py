@@ -61,7 +61,7 @@ def gettv(channel , link):
             m3u8_found = find_m3u8(get_requests)
             if m3u8_found:
                 print("m3u8 link found: ", m3u8_found)
-                tvlink+='{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
+                tv_link+='{"channel":"' + channel + '","link":"' + m3u8_found + '"},'
                 break
             else:
                 print(".m3u8 not found.. keep trying..")
@@ -74,4 +74,4 @@ for url in urls:
 
 driver.quit()
 with open('iptv.json','w') as f:
-    f.write('[' + tvlink + '{"channel":"test", "link":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"}]')
+    f.write('[' + tv_link + '{"channel":"test", "link":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"}]')
