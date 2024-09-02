@@ -90,5 +90,5 @@ for url in urls:
 
 driver.quit()
 
-with open('iptv.json','w') as f:
+with open('theTVapp.json','w') as f:
     f.write('[' + tv_link + '{"channel":"test", "link":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"}]')
