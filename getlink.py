@@ -79,7 +79,7 @@ def gettv(channel , link):
 
 for url in urls:
     gettv(url["channel"] , url["tvurl"])
-    time.sleep(random.randint(1, 5))    #sleep to avoid bot detect
+    time.sleep(random.randint(1, 15))    #sleep to avoid bot detect
 
 with open('iptv.json','w') as f:
     f.write('[' + tv_link + '{"channel":"test", "link":"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"}]')
