@@ -95,13 +95,20 @@ http://s4.nihontv.net:21585/discovery/index.m3u8
 #https://note.vg/raw/phamthaotivi
 #https://phcorner.net/threads/every-moveonjoy-us-stream-sources.2034684/
 
-ABC WOLO: http://fl1.moveonjoy.com/ABC_EAST/index.m3u8
-ACC Network: http://fl2.moveonjoy.com/ACC_NETWORK/index.m3u8
-AMC East: http://170.254.18.106/AMC/index.m3u8
-Animal Planet East: http://fl2.moveonjoy.com/Animal_Planet/index.m3u8
-BBC America East: http://fl2.moveonjoy.com/BBC_AMERICA/index.m3u8
-BBC World News: http://fl2.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
-beIN Sports: http://fl2.moveonjoy.com/BEIN_SPORTS/index.m3u8
+#EXTINF:-1 group-title="*", ABC WOLO: 
+http://fl1.moveonjoy.com/ABC_EAST/index.m3u8
+#EXTINF:-1 group-title="*", ACC Network: 
+http://fl2.moveonjoy.com/ACC_NETWORK/index.m3u8
+#EXTINF:-1 group-title="*", AMC East: 
+http://170.254.18.106/AMC/index.m3u8
+#EXTINF:-1 group-title="*", Animal Planet East: 
+http://fl2.moveonjoy.com/Animal_Planet/index.m3u8
+#EXTINF:-1 group-title="*", BBC America East: 
+http://fl2.moveonjoy.com/BBC_AMERICA/index.m3u8
+#EXTINF:-1 group-title="*", BBC World News: 
+http://fl2.moveonjoy.com/BBC_WORLD_NEWS/index.m3u8
+#EXTINF:-1 group-title="*", beIN Sports: 
+http://fl2.moveonjoy.com/BEIN_SPORTS/index.m3u8
 BET East: http://170.254.18.106/BET/index.m3u8
 BET Gospel: http://fl2.moveonjoy.com/BET_GOSPEL/index.m3u8
 BET Her East: http://fl2.moveonjoy.com/BET_HER/index.m3u8
