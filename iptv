@@ -15,6 +15,8 @@ https://thohanhdung.com/test/iptv.php?channel=vtv2
 #
 #EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", Test Channel
 http://47.129.29.67:8888/?channel=test
+#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/C-SPAN_Logo_%282019%29.svg/768px-C-SPAN_Logo_%282019%29.svg.png" group-title="News", C-Span
+http://fl2.moveonjoy.com/C-SPAN/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News
 https://news.codeautoplaycdn1.workers.dev/?codeby=nd&channel=foxnewschannel
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News2
