@@ -13,10 +13,7 @@ with open('iptv.json','r') as f:
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
         #self.process_request()
-        '''with open('../logs/http_request.log','a') as f:
-            f.write(f'{datetime.datetime.now()} ip: => {self.client_address[0]} requested => {self.path}\n')
-            f.close()'''
-
+        
         try:
             params = urllib.parse.parse_qs(self.path.split('?')[1])
             for item in iptv_list:
@@ -35,6 +32,11 @@ class MyServer(BaseHTTPRequestHandler):
             self.wfile.write(b"You requested: \n")
             self.wfile.write(bytes(self.path + "\n","utf-8"))
             return
+        finally:
+            with open('../logs/http_request.log','a') as f:
+                f.write(f'{datetime.datetime.now()} ip: => {self.client_address[0]} requested => {self.path}\n')
+                f.close()
+
 
     def do_POST(self):
         self.process_request()
