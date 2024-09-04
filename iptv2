@@ -94,117 +94,117 @@ http://s4.nihontv.net:21585/discovery/index.m3u8
 
 #https://note.vg/raw/phamthaotivi
 #https://phcorner.net/threads/every-moveonjoy-us-stream-sources.2034684/
-EXTINF:-1 ABC WOLO
+#EXTINF:-1 ABC WOLO
 http://fl1.moveonjoy.com/ABC_EAST/index.m3u8
-EXTINF:-1 AMC East
+#EXTINF:-1 AMC East
 http://170.254.18.106/AMC/index.m3u8
-EXTINF:-1 BBC America East
+#EXTINF:-1 BBC America East
 http://fl2.moveonjoy.com/BBC_AMERICA/index.m3u8
-EXTINF:-1 beIN Sports
+#EXTINF:-1 beIN Sports
 http://fl2.moveonjoy.com/BEIN_SPORTS/index.m3u8
-EXTINF:-1 BET Gospel
+#EXTINF:-1 BET Gospel
 http://fl2.moveonjoy.com/BET_GOSPEL/index.m3u8
-EXTINF:-1 BET Soul
+#EXTINF:-1 BET Soul
 http://fl2.moveonjoy.com/BET_SOUL/index.m3u8
-EXTINF:-1 Bounce
+#EXTINF:-1 Bounce
 http://72.46.118.193/Bounce/index.m3u8
-EXTINF:-1 Cartoon Network / [ãdül† swim]
+#EXTINF:-1 Cartoon Network / [ãdül† swim]
 http://fl2.moveonjoy.com/CARTOON_NETWORK/index.m3u8
-EXTINF:-1 CBS Sports Network
+#EXTINF:-1 CBS Sports Network
 http://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
-EXTINF:-1 CNN
+#EXTINF:-1 CNN
 http://fl2.moveonjoy.com/CNN/index.m3u8
-EXTINF:-1 Cooking Channel
+#EXTINF:-1 Cooking Channel
 http://170.254.18.106/COOKING/index.m3u8
-EXTINF:-1 Discovery Life
+#EXTINF:-1 Discovery Life
 http://fl2.moveonjoy.com/DISCOVERY_LIFE/index.m3u8
-EXTINF:-1 DisneyJr East
+#EXTINF:-1 DisneyJr East
 http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8
-EXTINF:-1 EPIX East
+#EXTINF:-1 EPIX East
 http://fl2.moveonjoy.com/EPIX/index.m3u8
-EXTINF:-1 EPIX Hits
+#EXTINF:-1 EPIX Hits
 http://fl2.moveonjoy.com/EPIX_HITS/index.m3u8
-EXTINF:-1 ESPN2
+#EXTINF:-1 ESPN2
 http://fl2.moveonjoy.com/ESPN_2/index.m3u8
-EXTINF:-1 ESPNU
+#EXTINF:-1 ESPNU
 http://fl2.moveonjoy.com/ESPN_U/index.m3u8
-EXTINF:-1 FOX Sports 1 (FS1)
+#EXTINF:-1 FOX Sports 1 (FS1)
 http://fl2.moveonjoy.com/FOX_Sports_1/index.m3u8
-EXTINF:-1 FOX News Channel
+#EXTINF:-1 FOX News Channel
 http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8
-EXTINF:-1 FOX Soccer Plus
+#EXTINF:-1 FOX Soccer Plus
 http://fl2.moveonjoy.com/FOX_SOCCER_PLUS/index.m3u8
-EXTINF:-1 Fuse
+#EXTINF:-1 Fuse
 http://fl2.moveonjoy.com/FUSE/index.m3u8
-EXTINF:-1 FXX East
+#EXTINF:-1 FXX East
 http://fl2.moveonjoy.com/FXX/index.m3u8
-EXTINF:-1 getTV
+#EXTINF:-1 getTV
 http://fl2.moveonjoy.com/GET_TV/index.m3u8
-EXTINF:-1 Hallmark Drama
+#EXTINF:-1 Hallmark Drama
 http://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
-EXTINF:-1 HBO2 East
+#EXTINF:-1 HBO2 East
 http://fl2.moveonjoy.com/HBO_2/index.m3u8
-EXTINF:-1 HBO Family East
+#EXTINF:-1 HBO Family East
 http://fl2.moveonjoy.com/HBO_FAMILY/index.m3u8
-EXTINF:-1 HGTV East
+#EXTINF:-1 HGTV East
 http://fl2.moveonjoy.com/HGTV/index.m3u8
-EXTINF:-1 ID (Investigation Discovery)
+#EXTINF:-1 ID (Investigation Discovery)
 http://fl2.moveonjoy.com/INVESTIGATION_DISCOVERY/index.m3u8
-EXTINF:-1 Laff TV
+#EXTINF:-1 Laff TV
 http://72.46.118.193/Laff/index.m3u8
-EXTINF:-1 Lifetime Movie Network
+#EXTINF:-1 Lifetime Movie Network
 http://fl2.moveonjoy.com/LIFETIME_MOVIE_NETWORK/index.m3u8
-EXTINF:-1 MLB Network
+#EXTINF:-1 MLB Network
 http://fl2.moveonjoy.com/MLB_NETWORK/index.m3u8
-EXTINF:-1 MSNBC
+#EXTINF:-1 MSNBC
 http://fl2.moveonjoy.com/MSNBC/index.m3u8
-EXTINF:-1 MTV2 East
+#EXTINF:-1 MTV2 East
 https://fl2.moveonjoy.com/MTV_2/index.m3u8
-EXTINF:-1 MTV Live
+#EXTINF:-1 MTV Live
 https://fl2.moveonjoy.com/MTV_LIVE/index.m3u8
-EXTINF:-1 NBA TV
+#EXTINF:-1 NBA TV
 http://fl2.moveonjoy.com/NBA_TV/index.m3u8
-EXTINF:-1 NBC Golf
+#EXTINF:-1 NBC Golf
 http://fl2.moveonjoy.com/GOLF_CHANNEL/index.m3u8
-EXTINF:-1 NFL Network
+#EXTINF:-1 NFL Network
 http://fl2.moveonjoy.com/NFL_NETWORK/index.m3u8
-EXTINF:-1 Nickelodeon East
+#EXTINF:-1 Nickelodeon East
 http://fl1.moveonjoy.com/NICKELODEON/index.m3u8
-EXTINF:-1 NickMusic
+#EXTINF:-1 NickMusic
 http://fl2.moveonjoy.com/NICK_MUSIC/index.m3u8
-EXTINF:-1 OWN (Oprah Winfrey Network)
+#EXTINF:-1 OWN (Oprah Winfrey Network)
 http://fl2.moveonjoy.com/OWN/index.m3u8
-EXTINF:-1 Oxygen East
+#EXTINF:-1 Oxygen East
 http://fl2.moveonjoy.com/OXYGEN/index.m3u8
-EXTINF:-1 ReelzChannel
+#EXTINF:-1 ReelzChannel
 http://fl2.moveonjoy.com/REELZ/index.m3u8
-EXTINF:-1 SEC Network
+#EXTINF:-1 SEC Network
 http://fl2.moveonjoy.com/SEC_NETWORK/index.m3u8
-EXTINF:-1 Showtime 2 East
+#EXTINF:-1 Showtime 2 East
 http://fl2.moveonjoy.com/SHOWTIME_2/index.m3u8
-EXTINF:-1 Showtime Next East
+#EXTINF:-1 Showtime Next East
 http://fl2.moveonjoy.com/SHOWTIME_NEXT/index.m3u8
-EXTINF:-1 Stadium
+#EXTINF:-1 Stadium
 http://fl2.moveonjoy.com/STADIUM/index.m3u8
-EXTINF:-1 Starz Comedy East
+#EXTINF:-1 Starz Comedy East
 http://fl2.moveonjoy.com/STARZ_COMEDY/index.m3u8
-EXTINF:-1 Starz Encore East
+#EXTINF:-1 Starz Encore East
 http://fl2.moveonjoy.com/STARZ_ENCORE/index.m3u8
-EXTINF:-1 Starz Encore Westerns
+#EXTINF:-1 Starz Encore Westerns
 http://fl2.moveonjoy.com/STARZ_ENCORE_WESTERNS/index.m3u8
-EXTINF:-1 SYFY East
+#EXTINF:-1 SYFY East
 http://fl2.moveonjoy.com/SYFY/index.m3u8
-EXTINF:-1 TCM (Turner Classic Movies) East
+#EXTINF:-1 TCM (Turner Classic Movies) East
 http://fl1.moveonjoy.com/TCM/index.m3u8
-EXTINF:-1 TLC (The Learning Channel) East
+#EXTINF:-1 TLC (The Learning Channel) East
 http://fl2.moveonjoy.com/TLC/index.m3u8
-EXTINF:-1 truTV East
+#EXTINF:-1 truTV East
 http://fl2.moveonjoy.com/TRU_TV/index.m3u8
-EXTINF:-1 TVOne
+#EXTINF:-1 TVOne
 http://fl2.moveonjoy.com/TV_ONE/index.m3u8
-EXTINF:-1 VH1 East
+#EXTINF:-1 VH1 East
 http://fl2.moveonjoy.com/VH1/index.m3u8
-EXTINF:-1 Weather Channel
+#EXTINF:-1 Weather Channel
 http://fl2.moveonjoy.com/THE_WEATHER_CHANNEL/index.m3u8
-EXTINF:-1 YES Network
+#EXTINF:-1 YES Network
 http://fl2.moveonjoy.com/YES_NETWORK/index.m3u8
