@@ -93,6 +93,11 @@ http://s4.nihontv.net:21585/discovery/index.m3u8
 
 
 #https://note.vg/raw/phamthaotivi
+
+#https://iptvcat.com/china__9
+#EXTINF:-1, Zhejiang TV International
+https://list.iptvcat.com/my_list/s/366279a0eac9fbbed9ddd368a12d4aa0.m3u8
+
 #https://phcorner.net/threads/every-moveonjoy-us-stream-sources.2034684/
 
 #EXTINF:-1,ABC WOLO
