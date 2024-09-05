@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml,https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz" tvg-shift=0 cache=500 deinterlace=1 aspect-ratio=16:9 m3uautoload=0
 #EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
 #EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-09-05_12:01:04!
-https://thohanhdung.com/test/iptv.php?channel=test
+https://iptv.gaixixon.workers.dev/?channel=test
 #EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN HD 🇻🇳
 http://m3u.at/AXN-VN?-playlist.m3u8
 #EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN.bak
@@ -12,9 +12,6 @@ https://iptv.gaixixon.workers.dev/?channel=vtv1
 https://iptv.gaixixon.workers.dev/?channel=vtv3
 #EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/91/VTV2%281%29.png" group-title="VTV", VTV2
 https://iptv.gaixixon.workers.dev/?channel=vtv2
-#
-#EXTINF:-1 tvg-logo="https://cdn-images.vtv.vn/thumb_w/640/2022/10/6/vtv-can-tho-16650500344341813094040.png" group-title="VTV", Test Channel
-http://47.129.29.67:8888/?channel=test
 #EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/C-SPAN_Logo_%282019%29.svg/768px-C-SPAN_Logo_%282019%29.svg.png" group-title="News", C-Span
 http://fl2.moveonjoy.com/C-SPAN/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News
