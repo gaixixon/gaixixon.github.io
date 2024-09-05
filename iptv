@@ -2,31 +2,31 @@
 #EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
 #EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-09-05_12:01:04!
 https://iptv.gaixixon.workers.dev/?channel=test
-#EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN HD 🇻🇳
+#EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN HD 🇻🇳
 http://m3u.at/AXN-VN?-playlist.m3u8
-#EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://static2.vieon.vn/vieplay-image/thumbnail_v4/2023/06/11/03azn6m0_cucdieutratoiphamhaiquan_296_168.webp" ,AXN.bak
+#EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN.bak
 https://qp-pldt-live-grp-06-prod.akamaized.net/out/u/cg_axn_sd.mpd
-#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Logo_VTV1_HD.png" group-title="VTV", VTV1 1080
+#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://i.imgur.com/fZeRYbp.png" group-title="VTV", VTV1 1080
 https://iptv.gaixixon.workers.dev/?channel=vtv1
-#EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f7/Vtv3_hd.png" group-title="VTV", VTV3
+#EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://i.imgur.com/p2g104x.png" group-title="VTV", VTV3
 https://iptv.gaixixon.workers.dev/?channel=vtv3
-#EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/91/VTV2%281%29.png" group-title="VTV", VTV2
+#EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://i.imgur.com/LxgClF3.png" group-title="VTV", VTV2
 https://iptv.gaixixon.workers.dev/?channel=vtv2
-#EXTINF:-1 tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/C-SPAN_Logo_%282019%29.svg/768px-C-SPAN_Logo_%282019%29.svg.png" group-title="News", C-Span
+#EXTINF:-1 tvg-logo="https://i.imgur.com/QoksZG3.png" group-title="News", C-Span
 http://fl2.moveonjoy.com/C-SPAN/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News
 https://news.codeautoplaycdn1.workers.dev/?codeby=nd&channel=foxnewschannel
-#EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-06/b823782b94f98698487bdf4b98c42b3b.png" group-title="News",Fox News2
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News2
 http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-07/5f8c050e1efc1074fb6e4bb3cc10112a.png" group-title="News",ABC News
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/XWIcVFs.png" group-title="News",ABC News
 https://lnc-abc-news.tubi.video/index.m3u8
-#EXTINF:-1 tvg-id="BBCNewsAsiaPacific.uk" tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-09/e26090febadd0239539333ab8e082a4e.png" group-title="News",BBC News Asia Pacific (720p)
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/YI6MnKU.png" group-title="News",BBC News Asia Pacific (720p)
 https://cdn4.skygo.mn/live/disk1/BBC_News/HLSv3-FTA/BBC_News.m3u8
-#EXTINF:-1 tvg-logo="http://s3.i3ns.net:2052/portal/picon/2023-07/5f8c050e1efc1074fb6e4bb3cc10112a.png" group-title="News",ABC News
+#EXTINF:-1 tvg-logo="https://i.imgur.com/XWIcVFs.png" group-title="News",ABC News
 https://content.uplynk.com/channel/3324f2467c414329b3b0cc5cd987b6be.m3u8
-#EXTINF:-1 tvg-logo="http://s3.i3ns.net:2052/portal/picon/2021-11/98bab21f4712c616268c0f775265d20d.jpg" group-title="News",DW
+#EXTINF:-1 tvg-logo="https://i.imgur.com/JibSs7m.jpeg" group-title="News",DW
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
-#EXTINF:-1 tvg-logo="https://pbs.twimg.com/profile_images/1592507021420642304/l0FPfXAr_400x400.png" group-title="News",FOX News Now
+#EXTINF:-1 tvg-logo="https://i.imgur.com/C2s4zfh.png" group-title="News",FOX News Now
 http://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="WAGADT1.us" tvg-logo="https://i.imgur.com/DcZoeGw.jpg" group-title="News",FOX 5 Atlanta GA (WAGA-TV) (720p)
 https://lnc-waga.tubi.video/index.m3u8
@@ -36,22 +36,24 @@ https://lnc-wnyw.tubi.video/index.m3u8
 https://lnc-wttg.tubi.video/index.m3u8
 #EXTINF:-1 tvg-id="CNNNews18.in" tvg-logo="https://i.imgur.com/WrmeIco.png" group-title="News",CNN News 18
 https://n18syndication.akamaized.net/bpk-tv/CNN_News18_NW18_MOB/output01/index.m3u8
-#EXTINF:-1 group-title="News" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgT-R52bE5nFi11FvXv3Er0ADTmXuBd3ieeQ&s" tvg-id="CNNInternationalEurope.us" status="online",CNN International Europe (720p) 
+#EXTINF:-1 group-title="News" tvg-logo="https://i.imgur.com/w2wjr4e.png" tvg-id="CNN EU" status="online",CNN International Europe (720p) 
 https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgT-R52bE5nFi11FvXv3Er0ADTmXuBd3ieeQ&s" group-title="News",CNN USA
+#EXTINF:-1 tvg-logo="https://i.imgur.com/w2wjr4e.png" group-title="News",CNN USA
 https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgT-R52bE5nFi11FvXv3Er0ADTmXuBd3ieeQ&s" group-title="News",CNN.bak
+#EXTINF:-1 tvg-logo="https://i.imgur.com/w2wjr4e.png" group-title="News",CNN.bak
 http://fl2.moveonjoy.com/CNN/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J6WqYPU.png" group-title="News", MSNBC
 http://143.244.60.30/NBC_EAST/index.m3u8
 #FASHION TV
-#EXTINF:-1 tvg-logo="https://seeklogo.com/images/F/fashion-tv-logo-C333C7A6DD-seeklogo.com.png" group-title="Fashion", Fashion TV
+#EXTINF:-1 tvg-logo="https://imgur.com/QKbegbG" group-title="Fashion", Fashion TV
+https://fashs043.cloudycdn.services/scte/sftv2/playlist.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/2q1e319.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/sftv2_chunklist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/1Rw5hy3.png" group-title="Fashion", Fashion TV4K
 https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_hls.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/pxCcrJz.png" group-title="Fashion",Fashion TV Midnight Secrets
 https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/playlist.m3u8
-#EXTINF:-1 tvg-logo="d" group-title="Fashion", Kaloopyz
+#EXTINF:-1 tvg-logo="https://i.imgur.com/dL1PLrj.png" group-title="Fashion", Kaloopy
 https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kaloopy/df363c46-44c2-4817-9c85-0bd06299d478/2.m3u8
-#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS38lomXSuH6DRK_p_TUUGZFYiS1o7Aj_JE73HE7njPQtPjVTGnV1SSuLEeOEJXOxmcCw&usqp=CAU" group-title="Others", Love Nature4K
+#EXTINF:-1 tvg-logo="blob:https://imgur.com/5e624494-b3cb-4f40-9ac3-b562b977e2a3" group-title="Others", Love Nature4K
 https://d18dyiwu97wm6q.cloudfront.net/playlist2160p.m3u8
