@@ -45,7 +45,7 @@ http://fl2.moveonjoy.com/CNN/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J6WqYPU.png" group-title="News", MSNBC
 http://143.244.60.30/NBC_EAST/index.m3u8
 #FASHION TV
-#EXTINF:-1 tvg-logo="https://imgur.com/QKbegbG" group-title="Fashion", Fashion TV
+#EXTINF:-1 tvg-logo="https://i.imgur.com/QKbegbG.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/2q1e319.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/sftv2_chunklist.m3u8
