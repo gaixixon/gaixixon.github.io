@@ -3,7 +3,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import time, json, datetime
 import urllib.parse
 import logging
-logging.basicConfig(filename='/tmp/http_request.lg', level=logging.DEBUG)
+logging.basicConfig(filename='/tmp/http_request.log', level=logging.DEBUG)
 
 hostName = "0.0.0.0"
 serverPort = 8888
