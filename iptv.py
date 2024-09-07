@@ -2,6 +2,8 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import time, json, datetime
 import urllib.parse
+import logging
+logging.basicConfig(filename='/tmp/http_request.lg', level=logging.DEBUG)
 
 hostName = "0.0.0.0"
 serverPort = 8888
@@ -75,8 +77,10 @@ if __name__ == "__main__":
 
     try:
         webServer.serve_forever()
-    except KeyboardInterrupt:
-        pass
+    except Exception as e:
+        logging.error("Errror " , exc_info=True)
+    #except KeyboardInterrupt:
+        #pass
 
-    webServer.server_close()
-    print("Server stopped.")
+    #webServer.server_close()
+    #print("Server stopped.")
