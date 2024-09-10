@@ -73,3 +73,5 @@ http://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 http://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/KNT57YG.png" group-title="Movie", Freeform East
 http://fl2.moveonjoy.com/FREE_FORM/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/3FK2kRf.png" group-title="Movie", Paramount Network
+http://fl2.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
