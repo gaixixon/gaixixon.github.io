@@ -67,7 +67,7 @@ http://fl2.moveonjoy.com/HBO_2/index.m3u8
 https://fl5.moveonjoy.com/DISNEY_CHANNEL/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Disney", Disney Junior
 http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8
-#EXTINF:-1 tvg-logo="" group-title="Movie", Hallmark Drama
+#EXTINF:-1 tvg-logo="https://i.imgur.com/wJCHnwQ.png" group-title="Movie", Hallmark Drama
 http://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Sports", CBS Sport
 http://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
