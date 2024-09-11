@@ -36,7 +36,7 @@ class MyServer(BaseHTTPRequestHandler):
                     self.end_headers()
                     break
             self.send_error(403, "Forbidden")
-            logging.debug('ok %s', params)
+            logging.debug('ok %s', self.path)
             return
         except Exception as e:
             #self.send_error(403,"I don't know")
