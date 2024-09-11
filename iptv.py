@@ -3,14 +3,24 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import time, json, datetime
 import urllib.parse
 import logging
-logging.basicConfig(filename='/tmp/http_request.log', level=logging.DEBUG)
+logging.basicConfig(filename='/tmp/pyserver.log', level=logging.DEBUG,
+                    encoding="utf-8",
+                    filemode="a",
+                    format="{asctime} - {levelname} - {message}",
+                    style="{",
+                    datefmt="%Y-%m-%d %H:%M",
+                    )
 
 hostName = "0.0.0.0"
 serverPort = 8888
 
-with open('iptv.json','r') as f:
-    iptv_list = json.load(f)
-    f.close()
+try:
+    with open('iptv.json','r') as f:
+        iptv_list = json.load(f)
+        f.close()
+    logging.debug('read iptv file ok')    
+except Exception as e:
+    logging.debug('red iptv file failed')
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
@@ -26,18 +36,20 @@ class MyServer(BaseHTTPRequestHandler):
                     self.end_headers()
                     break
             self.send_error(403, "Forbidden")
+            logging.debug('ok %s', params)
             return
-        except:
+        except Exception as e:
             #self.send_error(403,"I don't know")
             self.send_response(200)
             self.end_headers()
             self.wfile.write(b"You requested: \n")
             self.wfile.write(bytes(self.path + "\n","utf-8"))
+            logging.debug('lỗi không thấy kênh: %s', e)
             return
 
 
-    def do_POST(self):
-        self.process_request()
+    #def do_POST(self):
+        #self.process_request()
 
     def process_request(self):
 
@@ -73,12 +85,14 @@ class MyServer(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     webServer = HTTPServer((hostName, serverPort), MyServer)
-    print("Server started http://%s:%s" % (hostName, serverPort))
+    #print("Server started http://%s:%s" % (hostName, serverPort))
+    logging.debug("Server started on http://%s:%s" % (hostName, serverPort))
 
     try:
         webServer.serve_forever()
     except Exception as e:
-        logging.error("Errror " , exc_info=True)
+        logging.error("server die: " , exc_info=True)
+        logging.debug("Lỗi: %s", e)
     #except KeyboardInterrupt:
         #pass
 
