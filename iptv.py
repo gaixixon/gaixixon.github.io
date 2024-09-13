@@ -34,6 +34,7 @@ class MyServer(BaseHTTPRequestHandler):
                     self.send_response(302, 'Found')  # Use 302 for temporary redirection
                     self.send_header('Location', item['link'])
                     self.end_headers()
+                    return
                     break
             self.send_error(403, "Forbidden")
             logging.debug('ok %s', self.path)
