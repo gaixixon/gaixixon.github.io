@@ -44,6 +44,8 @@ https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_35
 http://fl2.moveonjoy.com/CNN/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J6WqYPU.png" group-title="News", MSNBC
 http://fl2.moveonjoy.com/MSNBC/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/r8D31ER.png" group-title="News", Sky News Australia
+https://www.apsattv.com/ssungaus.m3u
 #FASHION TV
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QKbegbG.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/playlist.m3u8
