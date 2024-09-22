@@ -12,7 +12,7 @@ logging.basicConfig(filename='/tmp/pyserver.log', level=logging.DEBUG,
                     )
 
 hostName = "0.0.0.0"
-serverPort = 80
+serverPort = 8888
 
 try:
     with open('iptv.json','r') as f:
