@@ -1,5 +1,5 @@
-#samsungTV https://www.apsattv.com/ssungaus.m3u
 #EXTM3U
+#samsungTV https://www.apsattv.com/ssungaus.m3u
 #EXTINF:-1,Sky News Now (Australia)
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00663-skynews-skynewsau-samsungau/playlist.m3u8
 #EXTINF:-1,Bloomberg TV (Australia)
@@ -272,8 +272,6 @@ https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01329-otterainc-toongoggles-samsu
 https://lightning-fnf-samsungaus.amagi.tv/playlist.m3u8
 #EXTINF:-1,Ryan and Friends (Australia)
 https://ryanandfriends-samsungau.amagi.tv/playlist.m3u8
-
-
 
 #https://github.com/thoike84/iptv-vn/blob/main/phattai84.txt
 #----------*-VTV-*----------#
