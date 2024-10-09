@@ -1,0 +1,1 @@
+{"id": "com.stremio.gxx-iptv", "version": "0.0.1", "name": "Live IPTV", "description": "Watch live IPTV Add-on", "resources": ["catalog", "meta", "stream"], "types": ["TVz"], "catalogs": [{"type": "TVz", "id": "BigBuckBunnyCatalog", "name": "Big Buck Bunny Catalog"}]}
