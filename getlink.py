@@ -7,7 +7,7 @@ agent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Ge
 opts = uc.ChromeOptions()
 opts.add_argument(f"user-agent={agent}")
 
-driver = uc.Chrome(options=opts, headless=True
+driver = uc.Chrome(options=opts, headless=True)
 
 urls = [{"channel":"vtv1","tvid":'#EXTINF:-1 tvg-id="vtv1hd"' , "tvurl":"https://tv360.vn/tv/vtv1-hd?ch=2"},
        {"channel":"vtv3","tvid":'#EXTINF:-1 tvg-id="vtv3hd"' , "tvurl":"https://tv360.vn/tv/vtv3-hd?ch=4"},
