@@ -44,6 +44,8 @@ https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_35
 http://fl2.moveonjoy.com/CNN/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J6WqYPU.png" group-title="News", MSNBC
 http://fl2.moveonjoy.com/MSNBC/index.m3u8
+#EXTINF:-1 tvg-id="CNAInternational.sg" tvg-logo="https://i.imgur.com/xWglicB.png" group-title="News",CNA International
+https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8
 #FASHION TV
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QKbegbG.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/playlist.m3u8
@@ -77,3 +79,15 @@ http://donelfantastic.github.io/live/skysportsNz1.m3u8
 http://fl2.moveonjoy.com/FREE_FORM/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/3FK2kRf.png" group-title="Movie", Paramount Network
 http://fl2.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
+#EXTINF:-1 group-title="AmagiTV", Action Holywood Movies
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
+#EXTINF:-1 group-title="AmagiTV" tvg-logo="https://i.imgur.com/Kh4MWaY.png", Outdoor Channel
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
+#EXTINF:-1 tvg-id="RealWild.us" tvg-logo="https://i.imgur.com/T9HHmAO.png" group-title="",Real Wild
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8
+#EXTINF:-1 tvg-id="AsianCrush.us" tvg-logo="https://i.imgur.com/hW6z1RG.png" group-title="Entertainment",AsianCrush
+https://amg01201-cinedigmenterta-asiancrush-cineverse-x701o.amagi.tv/playlist/amg01201-cinedigmenterta-asiancrush-cineverse/playlist.m3u8
+#EXTINF:-1 group-title="AmagiTV" tvg-id="CelestialClasicMovies.hk" tvg-logo="https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/hong-kong/celestial-classic-movies-hk.png",Celestial Classic Movies
+https://raw.githubusercontent.com/AzeemHadzrie/pesn-somestuff/main/m3u8/dens/celestial2.m3u8
+#EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="Others",Korean Central Television
+https://tv.nknews.org/tvdash/stream.mpd
