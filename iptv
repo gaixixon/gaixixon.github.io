@@ -1,6 +1,6 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml,https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz" tvg-shift=0 cache=500 deinterlace=1 aspect-ratio=16:9 m3uautoload=0
 #EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
-#EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-10-29_04:01:04!
+#EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-10-29_08:01:04!
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 #EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN HD 🇻🇳
 http://m3u.at/AXN-VN?-playlist.m3u8
