@@ -5,17 +5,15 @@
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 
 #TEST
-#EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN HD 🇻🇳
-http://m3u.at/AXN-VN?-playlist.m3u8
-#EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="Others",Korean Central Television
+#EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="#",Korean Central Television
 https://tv.nknews.org/tvdash/stream.mpd
 
 #VTV NEWS
-#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://i.imgur.com/fZeRYbp.png" group-title="VTV", VTV1 1080
+#EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://i.imgur.com/fZeRYbp.png" group-title="🇻🇳VTV", VTV1 1080
 https://iptv.gaixixon.workers.dev/?channel=vtv1
-#EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://i.imgur.com/p2g104x.png" group-title="VTV", VTV3
+#EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://i.imgur.com/p2g104x.png" group-title="🇻🇳VTV", VTV3
 https://iptv.gaixixon.workers.dev/?channel=vtv3
-#EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://i.imgur.com/LxgClF3.png" group-title="VTV", VTV2
+#EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://i.imgur.com/LxgClF3.png" group-title="🇻🇳VTV", VTV2
 https://iptv.gaixixon.workers.dev/?channel=vtv2
 
 #SPORT
