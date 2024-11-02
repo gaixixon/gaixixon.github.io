@@ -2,16 +2,26 @@
 #EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
 #EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-11-02_12:01:04!
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
+
+#TEST
 #EXTINF:-1 tvg-id="AXN" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN HD 🇻🇳
 http://m3u.at/AXN-VN?-playlist.m3u8
-#EXTINF:-1 tvg-id="axnhd" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN Espanyol
-http://168.181.122.234:8000/play/a00s/index.m3u8
+#EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="Others",Korean Central Television
+https://tv.nknews.org/tvdash/stream.mpd
+
+#VTV NEWS
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://i.imgur.com/fZeRYbp.png" group-title="VTV", VTV1 1080
 https://iptv.gaixixon.workers.dev/?channel=vtv1
 #EXTINF:-1 tvg-id="vtv3hd" tvg-logo="https://i.imgur.com/p2g104x.png" group-title="VTV", VTV3
 https://iptv.gaixixon.workers.dev/?channel=vtv3
 #EXTINF:-1 tvg-id="vtv2hd" tvg-logo="https://i.imgur.com/LxgClF3.png" group-title="VTV", VTV2
 https://iptv.gaixixon.workers.dev/?channel=vtv2
+
+#SPORT
+#EXTINF:-1 group-title="Sports", Bein Sport1
+http://x.v-iptv.com:25443/live/543304/1GGYRY5ZA8/9340.m3u8
+
+#NEWS
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QoksZG3.png" group-title="News", C-Span
 http://fl2.moveonjoy.com/C-SPAN/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News
@@ -58,28 +68,38 @@ https://fash2043.cloudycdn.services/slive/ftv_ftv_4k_hevc_73d_42080_default_466_
 https://fash1043.cloudycdn.services/slive/_definst_/ftv_ftv_midnite_k1y_27049_midnite_secr_108_hls.smil/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/dL1PLrj.png" group-title="Fashion", Kaloopy
 https://d35j504z0x2vu2.cloudfront.net/v1/manifest/0bc8e8376bd8417a1b6761138aa41c26c7309312/kaloopy/df363c46-44c2-4817-9c85-0bd06299d478/2.m3u8
+
+#NATURE & LIFE
 #EXTINF:-1 tvg-logo="https://i.imgur.com/GoYjXAE.png" group-title="Animal Plannet", Love Nature4K
 https://d18dyiwu97wm6q.cloudfront.net/playlist2160p.m3u8
+#EXTINF:-1 tvg-id="RealWild.us" tvg-logo="https://i.imgur.com/T9HHmAO.png" group-title="AmagiTV",Real Wild
+https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8
+
+#KIDS & CARTOON
 #EXTINF:-1 tvg-logo="" group-title="Kids", Cartoon Network
 http://fl2.moveonjoy.com/CARTOON_NETWORK/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Bv4s0YH.png" group-title="Movie", HBO
-https://fl2.moveonjoy.com/HBO/index.m3u8
-#EXTINF:-1 tvg-logo="https://i.imgur.com/Bv4s0YH.png" group-title="Movie", HBO2
-http://fl2.moveonjoy.com/HBO_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9sQDZRS.png" group-title="Kids", Disney Channel
 https://fl5.moveonjoy.com/DISNEY_CHANNEL/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/9sQDZRS.png" group-title="Kids", Disney Junior
 http://fl2.moveonjoy.com/DISNEY_JR/index.m3u8
+
+#MOVIES
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Bv4s0YH.png" group-title="Movie", HBO
+https://fl2.moveonjoy.com/HBO/index.m3u8
+#EXTINF:-1 tvg-logo="https://i.imgur.com/Bv4s0YH.png" group-title="Movie", HBO2
+http://fl2.moveonjoy.com/HBO_2/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/wJCHnwQ.png" group-title="Movie", Hallmark Drama
 http://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/YIFpI6v.png" group-title="Sports", CBS Sport
 http://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Sports", Sky Sport NZ
 http://donelfantastic.github.io/live/skysportsNz1.m3u8
-
-#MOVIES
-#EXTINF:-1 group-title="Movie" tvg-logo="https://i.imgur.com/9mzUQZQ.png",USA Network
+#EXTINF:-1 tvg-id="axnhd" group-title="Movie" tvg-logo="https://i.imgur.com/jCfW4jp.png" ,AXN Espanyol
+http://168.181.122.234:8000/play/a00s/index.m3u8
+#EXTINF:-1 group-title="Movie" tvg-logo="https://i.imgur.com/9mzUQZQ.png",USA Network 1
 http://supersonictv.live:8080/686554/799757/22129
+#EXTINF:-1 group-title="Movie" tvg-logo="https://i.imgur.com/9mzUQZQ.png",USA Network 2
+http://streamsy.online:2999/korrigan17/25AUFBdqOi/251
 #EXTINF:-1 tvg-id="boxmovie1" group-title="Movie" tvg-logo="https://i.imgur.com/leWw1zz.png",Box Movie 1
 https://s12.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e4.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/boxmovie1/index.m3u8?|Referer=http://sctvonline.vn/
 #EXTINF:-1 tvg-logo="https://i.imgur.com/KNT57YG.png" group-title="Movie", Freeform East
@@ -90,11 +110,8 @@ http://fl2.moveonjoy.com/PARAMOUNT_NETWORK/index.m3u8
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8
 #EXTINF:-1 group-title="AmagiTV" tvg-logo="https://i.imgur.com/Kh4MWaY.png", Outdoor Channel
 https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00718-outdoorchannela-outdoortvnz-samsungnz/playlist.m3u8
-#EXTINF:-1 tvg-id="RealWild.us" tvg-logo="https://i.imgur.com/T9HHmAO.png" group-title="AmagiTV",Real Wild
-https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg00426-littledotstudio-realwildnz-samsungnz/playlist.m3u8
 #EXTINF:-1 tvg-id="AsianCrush.us" tvg-logo="https://i.imgur.com/hW6z1RG.png" group-title="Entertainment",AsianCrush
 https://amg01201-cinedigmenterta-asiancrush-cineverse-x701o.amagi.tv/playlist/amg01201-cinedigmenterta-asiancrush-cineverse/playlist.m3u8
 #EXTINF:-1 group-title="AmagiTV" tvg-id="CelestialClasicMovies.hk" tvg-logo="https://raw.githubusercontent.com/Tapiosinn/tv-logos/master/countries/hong-kong/celestial-classic-movies-hk.png",Celestial Classic Movies
 https://raw.githubusercontent.com/AzeemHadzrie/pesn-somestuff/main/m3u8/dens/celestial2.m3u8
-#EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="Others",Korean Central Television
-https://tv.nknews.org/tvdash/stream.mpd
+
