@@ -1,5 +1,6 @@
-#EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml,https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz" tvg-shift=0 cache=500 deinterlace=1 aspect-ratio=16:9 m3uautoload=0
-#EXTM3U url-tvg="https://trada.info/epg.xml" tvg-shift=0 m3uautoload=0
+#EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml
+#EXTM3U url-tvg="https://trada.info/epg.xml"
+#EXTM3U url-tvg=https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz
 #EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-11-02_16:01:04!
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 
@@ -24,9 +25,7 @@ http://x.v-iptv.com:25443/live/543304/1GGYRY5ZA8/9340.m3u8
 #NEWS
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QoksZG3.png" group-title="News", C-Span
 http://fl2.moveonjoy.com/C-SPAN/index.m3u8
-#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News
-https://news.codeautoplaycdn1.workers.dev/?codeby=nd&channel=foxnewschannel
-#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News2
+#EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News@moveonjoy
 http://fl2.moveonjoy.com/FOX_News_Channel/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/XWIcVFs.png" group-title="News",ABC News
 https://lnc-abc-news.tubi.video/index.m3u8
