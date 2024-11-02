@@ -1,10 +1,18 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml
-#EXTM3U url-tvg="https://trada.info/epg.xml"
+#EXTM3U url-tvg="zhttps://trada.info/epg.xml"
 #EXTM3U url-tvg=https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz
 #EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-11-02_16:01:04!
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 
 #TEST
+EXTINF:-1, 13th Street BBC Earth
+http://185.236.229.62:9981/play/a02o
+EXTINF:-1, 13th Street Movie
+http://185.236.229.62:9981/play/a03o
+EXTINF:-1, 13th Street Golf
+http://185.236.229.62:9981/play/a04o
+EXTINF:-1, 13th Street Cannal+HD
+http://185.236.229.62:9981/play/a04o
 #EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="#",Korean Central Television
 https://tv.nknews.org/tvdash/stream.mpd
 
