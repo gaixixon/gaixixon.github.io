@@ -46,6 +46,7 @@ http://fl2.moveonjoy.com/CNN/index.m3u8
 http://fl2.moveonjoy.com/MSNBC/index.m3u8
 #EXTINF:-1 tvg-id="CNAInternational.sg" tvg-logo="https://i.imgur.com/xWglicB.png" group-title="News",CNA International
 https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8
+
 #FASHION TV
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QKbegbG.png" group-title="Fashion", Fashion TV
 https://fashs043.cloudycdn.services/scte/sftv2/playlist.m3u8
@@ -75,7 +76,10 @@ http://fl2.moveonjoy.com/HALLMARK_DRAMA/index.m3u8
 http://fl2.moveonjoy.com/CBS_SPORTS_NETWORK/index.m3u8
 #EXTINF:-1 tvg-logo="" group-title="Sports", Sky Sport NZ
 http://donelfantastic.github.io/live/skysportsNz1.m3u8
+
 #MOVIES
+#EXTINF:-1 group-title="Movie" tvg-logo="https://i.imgur.com/9mzUQZQ.png",USA Network
+http://supersonictv.live:8080/686554/799757/22129
 #EXTINF:-1 tvg-id="boxmovie1" group-title="Movie" tvg-logo="https://i.imgur.com/leWw1zz.png",Box Movie 1
 https://s12.edge.cdn.sctvonline.vn/cdn-cgi/edge/v2/e4.endpoint.cdn.sctvonline.vn/nginx.s12.edge.cdn.sctvonline.vn/hls/boxmovie1/index.m3u8?|Referer=http://sctvonline.vn/
 #EXTINF:-1 tvg-logo="https://i.imgur.com/KNT57YG.png" group-title="Movie", Freeform East
