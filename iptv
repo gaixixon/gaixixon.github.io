@@ -13,6 +13,8 @@ http://185.236.229.62:9981/play/a03o
 http://185.236.229.62:9981/play/a04o
 #EXTINF:-1 group-title="#", 13th Street Cannal+HD
 http://185.236.229.62:9981/play/a04o
+#EXTINF:-1 group-title="#", KBS 1
+http://mytv.dothome.co.kr/ch/public/1.php
 #EXTINF:-1 group-title="#", KBS 2
 http://mytv.dothome.co.kr/ch/public/3.php
 #EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="#",Korean Central Television
