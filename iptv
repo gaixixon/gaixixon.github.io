@@ -29,8 +29,14 @@ https://iptv.gaixixon.workers.dev/?channel=vtv3
 https://iptv.gaixixon.workers.dev/?channel=vtv2
 
 #SPORT
+#EXTINF:-1 group-title="Sports", Peacock Sport
+http://streamsy.online:2999/korrigan17/25AUFBdqOi/251/
+#EXTINF:-1 group-title="Sports", Peacock Sport
+http://supersonictv.live:8080/686554/799757/22129
 #EXTINF:-1 group-title="Sports", Bein Sport1
 http://x.v-iptv.com:25443/live/543304/1GGYRY5ZA8/9340.m3u8
+#EXTINF:-1 group-title="Sports", TNT Sport 1
+http://173.212.193.243:8080/JhoSyC4xxB/rQMcNhqUZU/1406
 
 #NEWS
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QoksZG3.png" group-title="News", C-Span
