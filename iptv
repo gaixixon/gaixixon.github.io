@@ -5,14 +5,16 @@
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 
 #TEST
-EXTINF:-1 group-title="#", 13th Street BBC Earth
+#EXTINF:-1 group-title="#", 13th Street BBC Earth
 http://185.236.229.62:9981/play/a02o
-EXTINF:-1group-title="#", 13th Street Movie
+#EXTINF:-1group-title="#", 13th Street Movie
 http://185.236.229.62:9981/play/a03o
-EXTINF:-1 group-title="#", 13th Street Golf
+#EXTINF:-1 group-title="#", 13th Street Golf
 http://185.236.229.62:9981/play/a04o
-EXTINF:-1 group-title="#", 13th Street Cannal+HD
+#EXTINF:-1 group-title="#", 13th Street Cannal+HD
 http://185.236.229.62:9981/play/a04o
+#EXTINF:-1 group-title="#", KBS 2
+http://mytv.dothome.co.kr/ch/public/3.php
 #EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="#",Korean Central Television
 https://tv.nknews.org/tvdash/stream.mpd
 
