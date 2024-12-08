@@ -5,6 +5,8 @@
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 
 #TEST
+#EXTINF:-1 tvg-logo="https://i.imgur.com/6exxGQB.png" group-title="#", Dove Channel
+https://cinedigm-dovenow-lg.amagi.tv/playlist.m3u8
 #EXTINF:-1 group-title="#", 13th Street BBC Earth
 http://185.236.229.62:9981/play/a02o
 #EXTINF:-1group-title="#", 13th Street Movie
