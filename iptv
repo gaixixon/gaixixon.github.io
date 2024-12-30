@@ -1,7 +1,7 @@
 #EXTM3U url-tvg="http://lichphatsong.xyz/schedule/epg.xml
 #EXTM3U url-tvg="zhttps://trada.info/epg.xml"
 #EXTM3U url-tvg=https://iptv-org.github.io/epg/guides/us/directv.com.epg.xml.gz
-#EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-12-31_00:01:04!
+#EXTINF:-1 tvg-id="#" group-title="#", Updated on 2024-12-31_04:01:04!
 https://raw.githubusercontent.com/gaixixon/gaixixon.github.io/refs/heads/master/hls
 
 #TEST
