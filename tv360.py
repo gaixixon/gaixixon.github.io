@@ -10,7 +10,8 @@ opts.binary_location = "/opt/selenium/chrome131/google-chrome"
 opts.add_argument(f"user-agent={agent}")
 
 from selenium.webdriver.chrome.service import Service
-service = Service("/opt/selenium/chromedriver130")
+#service = Service("/opt/selenium/chromedriver130")
+service = Service("/opt/fuck/chromedriver131/chromedriver")
 
 driver = uc.Chrome(service = service, options=opts, headless=True)
 
