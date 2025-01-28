@@ -11,7 +11,7 @@ opts.add_argument(f"user-agent={agent}")
 
 from selenium.webdriver.chrome.service import Service
 #service = Service("/opt/selenium/chromedriver130")
-service = Service("/opt/fuck/chromedriver131/chromedriver")
+service = Service("/opt/fuck/chromedriver132/chromedriver")
 
 driver = uc.Chrome(service = service, options=opts, headless=True)
 
