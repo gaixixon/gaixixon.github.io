@@ -6,12 +6,12 @@ import undetected_chromedriver as uc
 agent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 
 opts = uc.ChromeOptions()
-opts.binary_location = "/opt/selenium/chrome131/google-chrome"
+opts.binary_location = "/opt/fuck/chrome132/chrome"
 opts.add_argument(f"user-agent={agent}")
 
 from selenium.webdriver.chrome.service import Service
 #service = Service("/opt/selenium/chromedriver130")
-service = Service("/opt/fuck/chromedriver132/chromedriver")
+#service = Service("/opt/fuck/chromedriver132/chromedriver")
 
 driver = uc.Chrome(service = service, options=opts, headless=True)
 
