@@ -26,7 +26,7 @@ def find_m3u8(requests):
     # Search for the m3u8 URL in the requests
     for request in requests:
         #print(request)
-        if "m3u8" in request:
+        if "MHL" in request:
             return request
     return None
 
