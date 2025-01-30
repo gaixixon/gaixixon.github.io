@@ -43,8 +43,8 @@ http://173.212.193.243:8080/JhoSyC4xxB/rQMcNhqUZU/1406
 #NEWS
 #EXTINF:-1 tvg-logo="https://i.imgur.com/QoksZG3.png" group-title="News", C-Span
 http://fl2.moveonjoy.com/C-SPAN/index.m3u8
-#EXTINF:-1 tvg-id="foxnews.us" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News
-http://tvmate.icu:8080/owuraku@duck.com/owuraku@2023/47281
+#EXTINF:-1 tvg-id="foxnews.us" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News chống móm
+http://247preview.foxnews.com/hls/live/2020027/fncv3preview/primary.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/XWIcVFs.png" group-title="News",ABC News
 https://lnc-abc-news.tubi.video/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/YI6MnKU.png" group-title="News",BBC News Asia Pacific (720p)
