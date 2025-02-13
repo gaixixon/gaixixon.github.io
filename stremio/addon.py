@@ -7,117 +7,66 @@ import ssl
 import random
 import time, json, datetime
 from selenium import webdriver
+import threading
 
 ### phim moi stuff
-from getMovieCatalog import get_movie_catalog
+#from getMovieCatalog import get_movie_catalog
 from getMovieMeta import get_movie_meta
 from getMovieStream import get_movie_stream
+from downloadData import downloadData
+from searchCatalog import search_catalog
 ##############
 
 # Enable logging
 logging.basicConfig(level=logging.INFO)
 
-# Manifest definition
+ongoing_requests = {}
+lock = threading.Lock()
 
-MANIFEST =  {"id": "org.stremio.phimcu",
-             "version": "0.1.10",
-             "description": "Phim hơi cũ 0.1.10@gxx",
-             "name": "Phim cũ",
+# Manifest definition
+MANIFEST =  {"id": "io.stremio.phimmoi",
+             "version": "0.1.16",
+             "description": "Phim mới nhất",
+             "name": "Phim mới",
              "resources": [ "catalog", "meta" , "stream" ],
              "idPrefixes": ["http" , "gxx"],
-             "types": ["Phim Cũ"],
+             "types": ["Phim mới"],
              "catalogs": [
+                         {   "name": "Trending",
+                            "id": "gxx.trending",
+                            "type": "Phim mới",
+                            "extraSupported": ["search"]
+                        },
                         {   "name": "Phim đề cử",
                             "id": "gxx.phim-de-cu",
-                            "type": "Phim Cũ",
-                            "extra": [{ "name": "search", "isRequired": False }],
+                            "type": "Phim mới",
                             "extraSupported": ["search"]
                         },
                         {   "name": "Phim chiếu rạp",
                             "id": "gxx.phim-chieu-rap",
-                            "type": "Phim Cũ",
-                            "extra": [{ "name": "search", "isRequired": False }],
+                            "type": "Phim mới",
                             "extraSupported": ["search"]
                         },
                         {   "name": "Phim bộ mới",
                             "id": "gxx.phim-bo-moi",
-                            "type": "Phim Cũ",
-                            "extra": [{ "name": "search", "isRequired": False }],
+                            "type": "Phim mới",
                             "extraSupported": ["search"]
                         },
                         {   "name": "Phim lẻ mới",
                             "id": "gxx.phim-le-moi",
-                            "type": "Phim Cũ",
-                            "extra": [{ "name": "search", "isRequired": False }],
+                            "type": "Phim mới",
                             "extraSupported": ["search"]
                         },
-                        {   "name": "Trending",
-                            "id": "gxx.trending",
-                            "type": "Phim Cũ",
-                            "extra": [{ "name": "search", "isRequired": False }],
-                            "extraSupported": ["search"]
-                        },
-                        {   "name": "Top xem nhiều",
+                       {   "name": "Top xem nhiều",
                             "id": "gxx.top-xem-nhieu",
-                            "type": "Phim Cũ",
-                            "extra": [{ "name": "search", "isRequired": False }],
+                            "type": "Phim mới",
                             "extraSupported": ["search"]
                         }                        
                         ]
              }
-def save_data(data, param1='', param2=''):
-    with open('data.json','w') as f:
-        if param1 == 'meta':
-            DATA["meta"][data["meta"]["id"]] = data
-        
-        elif param1 == 'catalogs':
-            DATA["catalogs"][param2] = data
-            
-        elif param1 == 'stream':
-            try: 
-                DATA["stream"][param2] = data
-            except: 
-                DATA["stream"] = {}
-                DATA["stream"][param2] = data
-                
-        json.dump(DATA,f)
-        f.close()
 
-try: 
-    with open('data.json', 'r') as f:
-        DATA = json.load(f)
-        f.close()
-except Exception as e:
-    DATA = {"catalogs" :{"gxx.phim-de-cu":{},"gxx.phim-chieu-rap":{},"gxx.phim-bo-moi":{},"gxx.phim-le-moi":{},"gxx.trending":{},"gxx.top-xem-nhieu":{}},
-            "meta" : {},
-            "stream" : {},
-            "last_update": (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S.%f")
-           }
-
-def check_update():
-    #updated_status = DATA["last_update"]["status"]
-    try:
-        updated_time = DATA["last_update"]
-        updated_time = datetime.datetime.strptime(updated_time, "%Y-%m-%d %H:%M:%S.%f")  #convert date-like string to date object
-    except:
-        updated_time = datetime.datetime.now()
-        DATA["last_update"] = updated_time.strftime("%Y-%m-%d %H:%M:%S.%f")
-        save_data(DATA)
-    
-    duration = datetime.datetime.now() - updated_time
-    
-    if duration >= datetime.timedelta(hours=5):
-        print("\r\n***************************************\r\nUpdating.. now \r\n")
-        DATA["last_update"] = (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S.%f")
-        save_data(DATA)
-
-        #get_movie_catalog('gxx.index')              #TAM THO BO DI
-        save_data(DATA)
-
-get_movie_catalog() #update once on server start
 
 class StremioHandler(BaseHTTPRequestHandler):
-    
     def _set_response(self, content_type="application/json"):
         self.send_response(200)
         self.send_header("Content-Type", content_type)
@@ -129,51 +78,64 @@ class StremioHandler(BaseHTTPRequestHandler):
         #self.send_header("Expires", "0")
         self.end_headers()
         self.wfile.write(self.content)
-
+        
     def do_POST(self):
-      try:
-        content_length = int(self.headers['Content-Length'])
-        post_data = self.rfile.read(content_length).decode('utf-8')
-        data = json.loads(post_data)
+        try:
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length).decode('utf-8')
+            data = json.loads(post_data)
+            print(data["url"])
 
-        if data['cat'] == 'meta':
-            print('data received')
-            print(data)
+            if data["action"] == "savecatalog":
+                with open('catalog.json', 'w') as file:
+                    json.dump(data["data"], file, indent=4)
+            elif data["action"] == "savemeta":
+                with open('meta.json', 'w') as file:
+                    json.dump(data["data"], file, indent=4)
+            elif data["action"] == "savestream":
+                with open('stream.json', 'w') as file:
+                    json.dump(data["data"], file, indent=4)
+            elif data["action"] == "getmeta":
+                print(f"Start geting meta on request for: {data['url']}\r\n################\r\n\r\n")
+                META = get_movie_meta(data["url"])
+                self.content = json.dumps(META).encode('utf-8')
+                self._set_response()
 
-            #meta = get_movie_meta(data["url"])
-            print('wegot ------------------------------------\r\n\r\n')
-            meta = {}
-            meta['cat'] = 'meta'
-            meta['id'] = 'ufck'
-            meta['name'] = 'shit'
+            elif data["action"] == "getstream":
+                print(f"Start geting stream on request for: {data['url']}\r\n################\r\n\r\n")
+                STREAM = get_movie_stream(data["url"])
+                self.content = json.dumps(STREAM).encode('utf-8')
+                self._set_response()
             
-            print(meta)
-
-            response = requests.post('https://phimcu.gaixixon.workers.dev', json=json.dumps(meta), headers={'Content-Type':'application/json'})  #send data
-
-            print(response.status_code, response.json())
-
-            return
-
-            #self.content = json.dumps(meta).encode('utf-8')
-            #self._set_response()
-
-        elif data['cat'] == 'stream':
-            stream = get_movie_stream(url)
-            stream['cat'] = 'stream'
-            requests.post('https://phimcu.gaixixon.workers.dev', data = stream) 
-            return
-
+            elif data["action"] == "searchcatalog":
+                print(f"Start searching..for: {data['url']}\r\n################\r\n\r\n")
+                SEARCH = search_catalog(data["url"])
+                self.content = json.dumps(SEARCH).encode('utf-8')
+                self._set_response()
+           
+ 
+   
             #self.content = json.dumps(stream).encode('utf-8')
             #self._set_response()
+            self.send_response(200)
 
-        else:
-            self.send_error(404, "VCL: " + self.path)
-      except Exception as e:(print(e))
-
+        except Exception as e:
+            #self.send_error(404, "VCL: " + self.path)
+            print(e)
 
     def do_GET(self):
-        print ("Requested parameter:\r\n",self.path)
+        client_ip = self.client_address[0]
+        print("New request from ",client_ip)
+        with lock:
+            if client_ip in ongoing_requests:
+                self.send_response(429) #too many requests
+                self.end_headers()
+                self.wfile.write(b"Too many reqeusts")
+                return
+            else:
+                ongoing_requests[client_ip] = True
+
+        print ("Requested parameter:####################\r\n",self.path)
         # Parse URL path
         parsed_path = urlparse(self.path)
         path_segments = parsed_path.path.strip("/").split("/")
@@ -189,19 +151,24 @@ class StremioHandler(BaseHTTPRequestHandler):
             _, content_type, catalog_id = path_segments[:3]
             catalog_id = unquote(catalog_id.replace(".json",""))
             
-            if "local" == "local":  #get locally saved data
-                METAS = DATA["catalogs"][catalog_id]
-                print(METAS, "\r\n*******************************************\r\nMetas data LOCALLY retrieved")
-                
-            else:
-                METAS = get_movie_catalog(catalog_id)
-                save_data(METAS,"catalogs",catalog_id)
-                print(METAS,"\r\n*******************************************\r\nMetas data ONLINE retrieved")
-                
+            #check if the link has been served before or not
+            try:
+                file_path = '/home/ec2-user/stremio/catalog.json'
+                with open(file_path, 'r') as file:
+                    content = file.read()
+                    data = json.loads(content)
+                    if catalog_id in data:
+                        print("\r\nFinish getting data locally \r\r\n\n")
+                        METAS = data[catalog_id]
+            except FileNotFoundError:
+                print(f"The file {file_path} was not found.")
+            except json.JSONDecodeError:
+                print("Error decoding JSON. Please ensure the file contains valid JSON data.")
+
             self.content = json.dumps(METAS).encode('utf-8')
             self._set_response()
             
-            print('DONE DONE catalog process\r\n')
+            print('\r\nFinish getting catalog from locally')
 
         # HANDLE META REQUEST
         elif len(path_segments) >= 2 and path_segments[0] == "meta":
@@ -209,22 +176,9 @@ class StremioHandler(BaseHTTPRequestHandler):
             _, content_type, content_id = path_segments[:3]
             content_id = unquote(content_id.replace(".json",""))
             
-            #check if content_id existed in database or not
-            matched_item = DATA["meta"].get(content_id)
-            if matched_item:
-                META = matched_item
-                print(META)
-                print('\r\n*******************************************\r\nAbove meta is retrieved from LOCAL DATABASE')
-            else:
-                META = get_movie_meta(content_id)
-                print(META)
-                print('\r\n*******************************************\r\nAbove meta is FRESHLY ONLINE retrieved')
-                save_data(META,"meta")
-                
+            META = get_movie_meta(content_id)
             self.content = json.dumps(META).encode('utf-8')
             self._set_response()
-
-            print('DONE DONE meta \r\n')
 
         # HANDLE STREAM REQUEST
         elif len(path_segments) >= 2 and path_segments[0] == "stream":
@@ -232,35 +186,19 @@ class StremioHandler(BaseHTTPRequestHandler):
             _, content_type, content_id = path_segments[:3]
             content_id = unquote(content_id.replace(".json",""))
             
-            #check if STREAM content_id existed in database or not
-            try: 
-                matched_item = DATA["stream"].get(content_id)
-            except: 
-                DATA["stream"] = {}
-                matched_item = None
-                
-            if matched_item:
-                STREAM = matched_item
-                print(STREAM)
-                print('\r\n*******************************************\r\nAbove STREAM LINK is retrieved from LOCAL DATABASE')
-            else:
-                STREAM = get_movie_stream(content_id)
-                print(STREAM)
-                print('\r\n*******************************************\r\nAbove STREAM is FRESHLY ONLINE retrieved')
-                save_data(STREAM,"stream",content_id)
-                        
+            STREAM = get_movie_stream(content_id)
             self.content = json.dumps(STREAM).encode('utf-8')
             self._set_response()
-
-            print('\r\n*******************************************\r\nStart streaming from:')
-            print(STREAM)
-            print('End stream request!\r\n')
-            print('\r\n*******************************************\r\nPeriordicall check and HANDLE DATA UPDATE ON IDLE\r\n')
-            check_update()
  
         else:
             self.send_error(404, "VCL: " + self.path)
+            #downloadData()
 
+        with lock:
+            del ongoing_requests[client_ip]
+            print("Đã xóa lock")
+            downloadData()
+            
 def run(server_class=HTTPServer, handler_class=StremioHandler, port=443):
     server_address = ("", port)
     httpd = server_class(server_address, handler_class)

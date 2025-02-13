@@ -2,6 +2,7 @@ def get_movie_meta(url):
     #from bs4 import BeautifulSoup
     from urllib.parse import quote, unquote
     import json
+    import requests
     import time, random
 
     ############ selelinum init section
@@ -9,6 +10,22 @@ def get_movie_meta(url):
     from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.chrome.service import Service
     from webdriver_manager.chrome import ChromeDriverManager
+           
+    #check if the link has been served before or not
+    try:
+        file_path = '/home/ec2-user/stremio/meta.json'
+        with open(file_path, 'r') as file:
+            content = file.read()
+            data = json.loads(content)
+            if url in data:
+                print(f"#####'{url}'############# Đã có trong data.#################\r\n")
+                print(data[url])
+                print("\r\nFinish getting data locally \r\r\n\n")
+                return data[url]
+    except FileNotFoundError:
+        print(f"The file {file_path} was not found.")
+    except json.JSONDecodeError:
+        print("Error decoding JSON. Please ensure the file contains valid JSON data.")
 
     options = Options()
     options.add_argument('--headless')
@@ -32,7 +49,7 @@ def get_movie_meta(url):
     ##############################
     
     #url = unquote(url) #already unquote in main app
-    print('Start getting meta for ',url)
+    print('\r\r\n\nStart getting meta for ',url,'\r\n')
     driver.get(url)
     
     #html_source = driver.page_source   #html_source = driver.execute_script("return document.body.innerHTML;")
@@ -42,10 +59,10 @@ def get_movie_meta(url):
         "meta": {
             "id": "BigBuckBunny",
             "name": "Big Buck Bunny",
-            "type": "Phim Cũ",
+            "type": "Phim mới",
             "poster": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/uVEFQvFMMsg4e6yb03xOfVsDz4o.jpg",
             "videos": [],
-            "posterShape": "regular",
+            "posterShape": "landscape",
             "logo": "https://fanart.tv/fanart/movies/10378/hdmovielogo/big-buck-bunny-5054df8a36bfa.png",
             "background": "https://image.tmdb.org/t/p/original/aHLST0g8sOE1ixCxRDgM35SKwwp.jpg",
             "year": 2008,
@@ -56,7 +73,7 @@ def get_movie_meta(url):
     elem = driver.find_element("xpath",'''/html/body/div[4]/div/main/section[1]/div/div[1]/div''')
     meta["meta"]["id"] = url
     meta["meta"]["name"] = elem.find_element('xpath','.//div[2]/div/h1').text
-    meta["meta"]["type"] = "Phim Cũ"
+    meta["meta"]["type"] = "Phim mới"
     meta["meta"]["poster"] = driver.find_element('xpath','//*[@id="content"]/div/div[1]/div/div[1]/img').get_attribute('src')
     meta["meta"]["background"] = driver.find_element('xpath','//*[@id="content"]/div/div[1]/div/div[1]/img').get_attribute('src')
     meta["meta"]["logo"] = driver.find_element('xpath','//*[@id="content"]/div/div[1]/div/div[1]/img').get_attribute('src')
@@ -74,6 +91,10 @@ def get_movie_meta(url):
     print(meta) 
     #input('''Enter to exit''')  #this is to keep browser from being closed
     driver.quit()
+  
+    link = 'https://script.google.com/macros/s/AKfycbw8HZ8DgynbY8KW2e0pGMHRWwzs0nphV_ZFZwUoL_I2njlSNoal7YXfDk-wZkYCANKz/exec'
+    saveMeta = requests.post(link, json={"action":"savemeta" , "url":url , "meta":json.dumps(meta)})
+    print("\r\r\n\nFinish crawling.. \r\nThis message only appear if data is retrieved from that site")
     return meta
 
     

@@ -1,5 +1,6 @@
 import json
 import time, random
+import requests
 from urllib.parse import quote
 
 ############ selelinum init section
@@ -8,43 +9,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-def sanitize_string(video):
-  try:  
-    if video["id"] == None: video["id"] = "blank"
-    if video["title"] == None: video["title"] = "Blank title"
-    if video["poster"] == None: video["poster"] = "https://humenglish.com/wp-content/uploads/2024/07/Untitled-114.jpg"
-    return video
-  except Exception as e:
-    print(e)
-global DATA
-
-def check_and_append(cat_id, item):
-    global DATA
-    print ("cat: ", cat_id)
-    print("item: ",item)
-    print ("data: ",DATA)
-    input()
-    
-    if len(item["poster"])<1: item["poster"] = "https://i.imgur.com/hIkqk2V.png"
-    
-    mached_item = True
-    for meta in DATA["catalogs"][item]["metas"]:
-        try:
-            if meta["id"] == item["id"]:
-                mached_item = False
-                break
-        except: pass
-    if mached_item:
-        DATA["catalogs"][item]["metas"].append(item)
-    
-def get_movie_catalog(cat=''):
-    global DATA  #access to DATA variable from main append
-    
+        
+def get_movie_catalog(cat=''):    
     options = Options()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
-    options.add_argument("--headless");
     options.add_argument("--disable-gpu")
     
     agent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
@@ -63,26 +33,13 @@ def get_movie_catalog(cat=''):
     
     print("getMovieCatalog.py run\r\nRequested id: ",cat)
     
-    if cat != 'dfs':
+    if cat == '':
         url = 'https://phimmoichill.sale'
         
     print("Getting movies from this url: ", url)
-    
     driver.get(url)
-
-    #html_source = driver.page_source   #html_source = driver.execute_script("return document.body.innerHTML;")
-    #BeautifulSoup = BeautifulSoup(html_source, 'html.parser')
-    
-    '''metas = {"metas":[
-                        {"id":"default",
-                        "name":"Default",
-                        "poster":"https://humenglish.com/wp-content/uploads/2024/07/Untitled-114.jpg",
-                        "type":"Phim Cũ"}
-                     ]
-            }'''
-    metas = []
-    
-    try:  #phim đề cử
+    movie = []
+    try:  #phim đề cử                           
         elems = driver.find_elements("xpath",'''/html/body/div[4]/div/div[2]/div/div[2]/div[1]/div/div''')
                                                  
         for el in elems:
@@ -90,22 +47,23 @@ def get_movie_catalog(cat=''):
             href = el.find_element("xpath",'''.//article/div/a''').get_attribute('href')
             poster = el.find_element("xpath",'''.//article/div/a/figure/img''').get_attribute("src")
             
-            check_and_append("gxx.phim-de-cu",{"cat":"gxx.phim-de-cu","id":href,"name":title,"poster":poster,"type":"Phim Cũ"})
-                
+            movie.append({"CATALOGS":"gxx.phim-de-cu","URL":href,"TITLE":title,"POSTER":poster})
+            
     except Exception as e:
-        print(e)
+        movie.append({"CATALOGS":"gxx.phim-de-cu", "ERROR":"Lỗi lấy phim đề cử"})
         
-    try:  #phim chiếu rạp
+    try:  #phim chiếu rạp                     
         elems = driver.find_elements("xpath",'''/html/body/div[4]/div/main/div[1]/div[2]/div[1]/div/div''')
         for el in elems:
             title = el.find_element("xpath",'''.//article/div/a''').get_attribute('title')
             href = el.find_element("xpath",'''.//article/div/a''').get_attribute('href')
             poster = el.find_element("xpath",'''.//article/div/a/figure/img''').get_attribute("src")
             if 'http' not in poster: poster = ""
-            check_and_append("gxx.phim-chieu-rap",{"cat":"gxx.phim-chieu-rap","id":href,"name":title,"poster":poster,"type":"Phim Cũ"})
-                
+            
+            movie.append({"CATALOGS":"gxx.phim-chieu-rap","URL":href,"TITLE":title,"POSTER":poster})
+  
     except Exception as e:
-        print(e)
+        movie.append({"CATALOGS":"gxx.phim-chieu-rap", "ERROR":"Lỗi lấy phim chiếu rạp"})
 
     try:  #phim bộ mới
         elems = driver.find_elements("xpath",'''/html/body/div[4]/div/main/section[1]/div[3]/article''')
@@ -114,10 +72,10 @@ def get_movie_catalog(cat=''):
             href = el.find_element("xpath",'''.//div/a''').get_attribute('href')
             poster = el.find_element("xpath",'''.//div/a/figure/img''').get_attribute("src")
             if 'http' not in poster: poster = ""
-            check_and_append("gxx.phim-bo-moi", {"cat":"gxx.phim-bo-moi","id":href,"name":title,"poster":poster,"type":"Phim Cũ"})
+            movie.append({"CATALOGS":"gxx.phim-bo-moi","URL":href,"TITLE":title,"POSTER":poster})
                 
     except Exception as e:
-        print(e)
+        movie.append({"CATALOGS":"gxx.phim-bo-moi", "ERROR":"Lỗi lấy phim bộ mới"})
         
 
     try:  #phim lẻ mới
@@ -127,11 +85,11 @@ def get_movie_catalog(cat=''):
             href = el.find_element("xpath",'''.//div/a''').get_attribute('href')
             poster = el.find_element("xpath",'''.//div/a/figure/img''').get_attribute("src")
             if 'http' not in poster: poster = ""
-            check_and_append("gxx.phim-le-moi", {"cat":"gxx.phim-le-moi","id":href,"name":title,"poster":poster,"type":"Phim Cũ"})
+            movie.append({"CATALOGS":"gxx.phim-le-moi","URL":href,"TITLE":title,"POSTER":poster})
                 
     except Exception as e:
-        print(e)
-
+        movie.append({"CATALOGS":"gxx.phim-le-moi", "ERROR":"Lỗi lấy phim lẻ mới"})
+        
     try:  #trending
         elems = driver.find_elements("xpath",'''/html/body/div[4]/div/aside/div[1]/section/div/div[2]/div''')
         for el in elems:
@@ -139,33 +97,33 @@ def get_movie_catalog(cat=''):
             href = el.find_element("xpath",'''.//a''').get_attribute('href')
             poster = el.find_element("xpath",'''.//a/div/img''').get_attribute("src")
             if 'http' not in poster: poster = ""
-            check_and_append("gxx.trending", {"cat":"gxx.trending","id":href,"name":title,"poster":poster,"type":"Phim Cũ"})
+            movie.append({"CATALOGS":"gxx.trending","URL":href,"TITLE":title,"POSTER":poster})
                 
     except Exception as e:
-        print(e)
-    
+        movie.append({"CATALOGS":"gxx.trending", "ERROR":"Lỗi lấy phim trending"})
+        
     try:  #top xem nhiều
-        metas["gxx.top-xem-nhieu"] = {"metas":[]}
         elems = driver.find_elements("xpath",'''/html/body/div[4]/div/aside/div[2]/section/div/div/div''')
         for el in elems:
             title = el.find_element("xpath",'''.//a''').get_attribute('title')
             href = el.find_element("xpath",'''.//a''').get_attribute('href')
             poster = el.find_element("xpath",'''.//a/div/img''').get_attribute("src")
             if 'http' not in poster: poster = ""
-            check_and_append("gxx.top-xem-nhieu",  {"cat":"gxx.top-xem-nhieu","id":href,"name":title,"poster":poster,"type":"Phim Cũ"})
+            movie.append({"CATALOGS":"gxx.top-xem-nhieu","URL":href,"TITLE":title,"POSTER":poster})
                 
     except Exception as e:
-        print(e)
+        movie.append({"CATALOGS":"gxx.top-xem-nhieu", "ERROR":"Lỗi lấy phim xem nhiều"})
         
     #done scraping...
-    
+     
     #input('''Enter to exit''')  #this is to keep browser from being closed
     print("Finished getting data from: ", url,"\r\nThe result is: \r\n")
     driver.quit()
-    return metas
-
+    return movie
     
 if __name__ == "__main__":
-    url = 'https://phimmoichill.io'
-    movies_metas = get_movie_catalog(url)
+    movies_metas = get_movie_catalog()
+    url = 'https://script.google.com/macros/s/AKfycbw8HZ8DgynbY8KW2e0pGMHRWwzs0nphV_ZFZwUoL_I2njlSNoal7YXfDk-wZkYCANKz/exec'
+    
+    response = requests.post(url, json={"action":"savecatalog","data":movies_metas})
     print(movies_metas)

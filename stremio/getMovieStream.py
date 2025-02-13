@@ -3,6 +3,7 @@ def get_movie_stream(url):
     from urllib.parse import quote, unquote
     import json
     import time, random
+    import requests
 
     ############ selelinum init section
     from selenium import webdriver
@@ -26,6 +27,25 @@ def get_movie_stream(url):
     #driver.set_window_position(0, 0)
     #driver.maximize_window()
     #url = unquote(url)  #unquoted from main app
+
+    #check if the link has been served before or not
+    try:
+        file_path = '/home/ec2-user/stremio/streams.json'
+        with open(file_path, 'r') as file:
+            content = file.read()
+            data = json.loads(content)
+            if url in data:
+                print(f"Link '{url}' đã có trong data.\r\n")
+                print(data[url])
+                print("Links are locally retrieved\r\r\n\n")
+                return data[url]
+    except FileNotFoundError:
+        print(f"The file {file_path} was not found.")
+    except json.JSONDecodeError:
+        print("Error decoding JSON. Please ensure the file contains valid JSON data.")
+
+
+
     print ('Start getting stream link for :',url)
     
     driver.get(url)
@@ -62,6 +82,9 @@ def get_movie_stream(url):
     #print(streams) 
     #input('''Enter to exit''')  #this is to keep browser from being closed
     driver.quit()
+    link = 'https://script.google.com/macros/s/AKfycbw8HZ8DgynbY8KW2e0pGMHRWwzs0nphV_ZFZwUoL_I2njlSNoal7YXfDk-wZkYCANKz/exec'
+    saveStream = requests.post(link, json={"action":"savestream" , "url":url , "stream":json.dumps(streams)})
+    #print(f"\r\nFinish getting link online\r\r\n\n")
     return streams
 
     
