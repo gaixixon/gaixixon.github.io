@@ -1,3 +1,25 @@
+import json, requests
+
+def hls_to_m3u8(json_data):
+    data = json.loads(json_data)  # Parse JSON string
+    quality = next(iter(data))  # Get the first key (e.g., "2048p")
+    segments = data[quality]["segments"]
+
+    # M3U8 Header
+    m3u8_content = "#EXTM3U\n#EXT-X-VERSION:3\n#EXT-X-TARGETDURATION:4\n#EXT-X-PLAYLIST-TYPE:VOD\n"
+
+    # Add each segment
+    for segment in segments:
+        duration = segment["du"]
+        url = segment["link"]
+        m3u8_content += f"#EXTINF:{duration},\n{url}\n"
+
+    # End of playlist
+    m3u8_content += "#EXT-X-ENDLIST"
+
+    print(f"M3U8 file saved as \r\n {m3u8_content}")
+    return m3u8_content
+
 def get_movie_stream(url):
     #from bs4 import BeautifulSoup
     from urllib.parse import quote, unquote
@@ -24,28 +46,10 @@ def get_movie_stream(url):
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     ###############################3333333
 
-    #driver.set_window_position(0, 0)
-    #driver.maximize_window()
+    driver.set_window_position(0, 0)
+    driver.maximize_window()
     #url = unquote(url)  #unquoted from main app
-
-    #check if the link has been served before or not
-    try:
-        file_path = '/home/ec2-user/stremio/streams.json'
-        with open(file_path, 'r') as file:
-            content = file.read()
-            data = json.loads(content)
-            if url in data:
-                print(f"Link '{url}' đã có trong data.\r\n")
-                print(data[url])
-                print("Links are locally retrieved\r\r\n\n")
-                return data[url]
-    except FileNotFoundError:
-        print(f"The file {file_path} was not found.")
-    except json.JSONDecodeError:
-        print("Error decoding JSON. Please ensure the file contains valid JSON data.")
-
-
-
+ 
     print ('Start getting stream link for :',url)
     
     driver.get(url)
@@ -65,12 +69,15 @@ def get_movie_stream(url):
     #driver.find_element("xpath" , '''//div[@class="jw-skip jw-reset jw-skippable"]''').click()
     #time.sleep(random.randint(4,5))
     #driver.find_element("xpath" , '''//div[@class="jw-skip jw-reset jw-skippable"]''').click()
-    #time.sleep(0.5)
+    time.sleep(0.5)
     #driver.find_element("xpath" , '''//div[@id="jwplayer"]''').click()
-    
-    
+
+    driver.find_element("xpath" , '''//div[@id="player-chill"]''').click()
+    time.sleep(16)
+    driver.find_element("xpath" , '''//div[@id="preroll-player-skip"]''').click()
+  
     streams = {"streams" : []}
-    time.sleep(2)
+    time.sleep(10)
     netlog = driver.execute_script("""var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;if (!performance) {return [];}var entries = performance.getEntriesByType("resource");var urls = [];for (var i = 0; i < entries.length; i++) {urls.push(entries[i].name);}return urls;""")
     i = 0
     for link in netlog:
@@ -78,17 +85,29 @@ def get_movie_stream(url):
             i+=1
             streams["streams"].append ({"title":"Link" + str(i) , "url":link})
             #break
-    
-    #print(streams) 
-    #input('''Enter to exit''')  #this is to keep browser from being closed
+        elif 'https://dash.motchills.net/hlspm/' in link:
+            streams = link
+            break
+            
     driver.quit()
+    
+    #check if it's tiktok video type or not
+    if 'https://dash.motchills.net/hlspm/' in streams:
+        url = "https://dash.motchills.net/hlspm/81519a6510ef8199194be71e48021c2b"
+        response = requests.get(url)
+        if response.status_code == 200:
+            file_text = response.text
+            m3u8_content = hls_to_m3u8(file_text)
+    
+    '''
     link = 'https://script.google.com/macros/s/AKfycbw8HZ8DgynbY8KW2e0pGMHRWwzs0nphV_ZFZwUoL_I2njlSNoal7YXfDk-wZkYCANKz/exec'
     saveStream = requests.post(link, json={"action":"savestream" , "url":url , "stream":json.dumps(streams)})
-    #print(f"\r\nFinish getting link online\r\r\n\n")
+    '''
+    print(f"\r\nFinish getting link online\r\r\n\n")
     return streams
 
     
 if __name__ == "__main__":
-    url = 'https://phimmoi.club/xem-phim/dao-hai-tac-one-piece-netflix-tap-1-154103'
+    url = 'https://phimmoichill.blog/xem/nhim-sonic-3-tap-full-pm120742'
     movie_stream = get_movie_stream(url)
     print(movie_stream)
