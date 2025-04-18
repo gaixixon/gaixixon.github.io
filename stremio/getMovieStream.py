@@ -1,4 +1,7 @@
-import json, requests
+#https://dash.motchills.net/raw/a440ca82ccae41dac64f6b86713eca2f/index.m3u8
+#https://dash.motchills.net/hlspm/81519a6510ef8199194be71e48021c2b/
+
+import json, requests, re
 
 def hls_to_m3u8(json_data):
     data = json.loads(json_data)  # Parse JSON string
@@ -34,7 +37,6 @@ def get_movie_stream(url):
     from webdriver_manager.chrome import ChromeDriverManager
 
     options = Options()
-    options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument("--headless");
@@ -73,31 +75,28 @@ def get_movie_stream(url):
     #driver.find_element("xpath" , '''//div[@id="jwplayer"]''').click()
 
     driver.find_element("xpath" , '''//div[@id="player-chill"]''').click()
-    time.sleep(16)
+    time.sleep(10)
     driver.find_element("xpath" , '''//div[@id="preroll-player-skip"]''').click()
   
     streams = {"streams" : []}
-    time.sleep(10)
+    time.sleep(5)
     netlog = driver.execute_script("""var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;if (!performance) {return [];}var entries = performance.getEntriesByType("resource");var urls = [];for (var i = 0; i < entries.length; i++) {urls.push(entries[i].name);}return urls;""")
     i = 0
     for link in netlog:
         if 'm3u8' in link:
-            i+=1
+            '''i+=1
             streams["streams"].append ({"title":"Link" + str(i) , "url":link})
-            #break
-        elif 'https://dash.motchills.net/hlspm/' in link:
+            '''
             streams = link
             break
-            
+        elif 'https://dash.motchills.net/hlspm/' in link:
+            streams = re.sub(r"hlspm" , "raw" , link) + "/index.m3u8"
+            break
     driver.quit()
+    print(streams)
+    #input('wait')
     
-    #check if it's tiktok video type or not
-    if 'https://dash.motchills.net/hlspm/' in streams:
-        url = "https://dash.motchills.net/hlspm/81519a6510ef8199194be71e48021c2b"
-        response = requests.get(url)
-        if response.status_code == 200:
-            file_text = response.text
-            m3u8_content = hls_to_m3u8(file_text)
+ 
     
     '''
     link = 'https://script.google.com/macros/s/AKfycbw8HZ8DgynbY8KW2e0pGMHRWwzs0nphV_ZFZwUoL_I2njlSNoal7YXfDk-wZkYCANKz/exec'

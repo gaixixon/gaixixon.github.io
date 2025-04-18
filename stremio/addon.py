@@ -13,10 +13,14 @@ from getMovieStream import get_movie_stream
 ##############
 
 # Enable logging
-logging.basicConfig(level=logging.INFO)
+log_path = '/tmp/stremio.log'
+logging.basicConfig(filename = log_path, 
+                    level=logging.INFO,
+                    format="%(asctime)s - %(levelname)s - %(message)s"
+                    )
 
-ongoing_requests = {}
-lock = threading.Lock()
+#ongoing_requests = {}
+#lock = threading.Lock()
 
 
 
@@ -42,17 +46,18 @@ class StremioHandler(BaseHTTPRequestHandler):
             if data["action"] == "getstream":
                 print(f"Start geting stream on request for: {data['url']}\r\n################\r\n\r\n")
                 STREAM = get_movie_stream(data["url"])
-                self.content = json.dumps(STREAM).encode('utf-8')
+                self.content = json.dumps({"gxx":200, "info":"Link is ok", "url":STREAM}).encode('utf-8')
                 self._set_response()
              
    
             #self.content = json.dumps(stream).encode('utf-8')
             #self._set_response()
-            self.send_response(200)
 
         except Exception as e:
             #self.send_error(404, "VCL: " + self.path)
             print(e)
+            self.content = json.dumps({"gxx":"6969", "info":"Lỗi getlink"}).encode('utf-8')
+            self._set_response()
 
     def do_GET(self):
         self.send_error(404, "VCL: " + self.path)
@@ -66,4 +71,11 @@ def run(server_class=HTTPServer, handler_class=StremioHandler, port=443):
     httpd.serve_forever()
 
 if __name__ == "__main__":
-    run()
+    while True:
+        try:
+            run()
+        except Exception as e:
+            logging.info(f"Server crashsssssssssssssssssssssssssssss {e}")
+            logging.exception("Server crash")
+            time.sleep(5)
+            run()
