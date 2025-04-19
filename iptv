@@ -21,7 +21,8 @@ http://mytv.dothome.co.kr/ch/public/1.php
 http://mytv.dothome.co.kr/ch/public/3.php
 #EXTINF:-1 tvg-id="KoreanCentralTelevision.kp" tvg-logo="https://i.imgur.com/p02AEOF.png" group-title="#",Korean Central Television
 https://tv.nknews.org/tvdash/stream.mpd
-
+#EXTINF:-1 group-title="#",China State News
+https://iptv.gaixixon.workers.dev/?channel=cgtn-live-stream
 #VTV NEWS
 #EXTINF:-1 tvg-id="vtv1hd" tvg-logo="https://i.imgur.com/fZeRYbp.png" group-title="🇻🇳VTV", VTV1 1080
 https://iptv.gaixixon.workers.dev/?channel=vtv1
