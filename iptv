@@ -45,8 +45,10 @@ http://173.212.193.243:8080/JhoSyC4xxB/rQMcNhqUZU/1406
 http://fl2.moveonjoy.com/C-SPAN/index.m3u8
 #EXTINF:-1 tvg-id="foxnews.us" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News chống móm
 http://247preview.foxnews.com/hls/live/2020027/fncv3preview/primary.m3u8
+#EXTINF:-1 tvg-id="foxnews.us" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News tmp
+https://nl1.streamlive.to/freeabr/fjwriuh0hwmzwdm/chunks.m3u8
 #EXTINF:-1 tvg-id="foxnews.us" tvg-logo="https://i.imgur.com/kvyVn1k.png" group-title="News",Fox News xịn
-https://v15.thetvapp.to/hls/FoxNewsChannel/tracks-v1a1/mono.m3u8?token=HMVjInfB89ArluQIW7MMpg&expires=1744972967&user_id=cHgydnVDVlZDRXVtRkNjU0o0SFR2a3RrZ1VVNVc0NG80bGEzdE4yMg==
+https://iptv.gaixixon.workers.dev/?channel=foxnews
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/XWIcVFs.png" group-title="News",ABC News
 https://lnc-abc-news.tubi.video/index.m3u8
 #EXTINF:-1 tvg-id="" tvg-logo="https://i.imgur.com/YI6MnKU.png" group-title="News",BBC News Asia Pacific (720p)
@@ -70,7 +72,7 @@ https://cnn-cnninternational-1-eu.rakuten.wurl.tv/playlist.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/w2wjr4e.png" group-title="News",CNN USA
 https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
 #EXTINF:-1 tvg-logo="https://i.imgur.com/w2wjr4e.png" group-title="News",CNN TVapp
-https://v16.thetvapp.to/hls/CNN/tracks-v1a1/mono.m3u8?token=bir4IsSkaKoPrO5uI81bpw&expires=1744994714&user_id=dDhmU1BDYmdWNld3Sk0zOU40bWhEYXNMZ1B3SnpPVHQyV1NBQXBzdw==
+https://iptv.gaixixon.workers.dev/?channel=onecnn
 #EXTINF:-1 tvg-logo="https://i.imgur.com/J6WqYPU.png" group-title="News", MSNBC
 http://fl2.moveonjoy.com/MSNBC/index.m3u8
 #EXTINF:-1 tvg-id="CNAInternational.sg" tvg-logo="https://i.imgur.com/xWglicB.png" group-title="News",CNA International
